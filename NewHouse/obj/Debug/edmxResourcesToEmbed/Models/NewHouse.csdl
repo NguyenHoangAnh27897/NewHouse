@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NewHouseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="NH_Contact">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Subject" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NH_Feature">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Icon01" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title01" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description01" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Icon02" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title02" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description02" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Icon03" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title03" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description03" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Icon04" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title04" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description04" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Icon05" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title05" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description05" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Icon06" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title06" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description06" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NH_Homepage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title01" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle01" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image01" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description01" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle02" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image02" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description02" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle03" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image03" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description03" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle04" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image04" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description04" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NH_Intro">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NH_News">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Images" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Avatar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NH_Project">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProjectName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Avatar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Images" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="ArchitectID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NH_Solution">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SolutionContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="NewHouseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="NH_Contact" EntityType="Self.NH_Contact" />
+    <EntitySet Name="NH_Feature" EntityType="Self.NH_Feature" />
+    <EntitySet Name="NH_Homepage" EntityType="Self.NH_Homepage" />
+    <EntitySet Name="NH_Intro" EntityType="Self.NH_Intro" />
+    <EntitySet Name="NH_News" EntityType="Self.NH_News" />
+    <EntitySet Name="NH_Project" EntityType="Self.NH_Project" />
+    <EntitySet Name="NH_Solution" EntityType="Self.NH_Solution" />
+    <EntitySet Name="NH_AboutUs" EntityType="NewHouseModel.NH_AboutUs" />
+    <EntitySet Name="NH_Partner" EntityType="NewHouseModel.NH_Partner" />
+    <EntitySet Name="NH_Partnership" EntityType="NewHouseModel.NH_Partnership" />
+    <EntitySet Name="NH_Slider" EntityType="NewHouseModel.NH_Slider" />
+    <EntitySet Name="NH_Architec" EntityType="NewHouseModel.NH_Architec" />
+  </EntityContainer>
+  <EntityType Name="NH_AboutUs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NH_Partner">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Avatar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NH_Partnership">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NH_Slider">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title01" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle01" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image01" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title02" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle02" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image02" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title03" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle03" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image03" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title04" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle04" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image04" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title05" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle05" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image05" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title06" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle06" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image06" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NH_Architec">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Avatar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

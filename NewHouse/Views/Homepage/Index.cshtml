@@ -1,0 +1,364 @@
+﻿@model IEnumerable<NewHouse.Models.NH_Homepage>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+<div class="main-wrapper">
+    <div class="container">
+
+        <!-- Start breadcrumb section  -->
+        <div class="row">
+            <div class="col-lg-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/webmaster/index">Trang chủ</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Quản lí trang chủ</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div class="col-lg-12" id="choose">
+            <div class="row">
+                <h5 class="mb col-lg-2" style="color:white">Ngôn ngữ: </h5>
+                <select class="form-control col-lg-3" id="opt" name="opt" style="width:15%; margin-left:-35px">
+                    <option value="vn" selected>Tiếng Việt</option>
+                    <option value="en">Tiếng Anh</option>
+                </select>
+            </div>
+        </div>
+        <br />
+
+        <!-- Start form -->
+        <div class="form-area">
+            <div class="row">
+
+                <div class="col-lg-12" id="vn">
+                    <div class="single-form">
+                        <div class="section-head">
+                            <div class="title">
+                                <h4>Chỉnh sửa mô hình</h4>
+                            </div>
+                        </div>
+
+                        <div class="section-body">
+                            <form action="/homepage/edit" method="post" enctype="multipart/form-data">
+                                @foreach (var item in Model)
+                                {
+                                    if (item.ID == 1)
+                                    {
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 100 KÍ TỰ)</label>
+                                            <input name="title" maxlength="100" class="form-control" value="@item.Title01" />
+                                            <input name="lang" value="vn" type="hidden" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput4">Nội dung</label>
+                                            <textarea name="content" id="editor">@item.Description</textarea>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                                    <input name="title1" maxlength="50" class="form-control" value="@item.SubTitle01" />
+                                                </div>
+
+                                                @if (item.Image01 != null)
+                                                {
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                        <br />
+                                                        <input type="file" name="image1" accept="image/*" multiple="multiple" />
+                                                        <img src="~/Images/NewHouse/imagehomepage/@item.Image01" style="width:100%" />
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                        <br />
+                                                        <input type="file" name="image1" accept="image/*" multiple="multiple" />
+                                                    </div>
+                                                }
+
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Miêu tả (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                                    <textarea name="des1" class="form-control" maxlength="200" rows="20" cols="50" style="height: 200px">@item.Description01</textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                                    <input name="title2" maxlength="50" class="form-control" value="@item.SubTitle02" />
+                                                </div>
+
+                                                @if (item.Image01 != null)
+                                                {
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                        <br />
+                                                        <input type="file" name="image2" accept="image/*" multiple="multiple" />
+                                                        <img src="~/Images/NewHouse/imagehomepage/@item.Image02" style="width:100%" />
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                        <br />
+                                                        <input type="file" name="image2" accept="image/*" multiple="multiple" />
+                                                    </div>
+                                                }
+
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Miêu tả (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                                    <textarea name="des2" class="form-control" maxlength="200" rows="20" cols="50" style="height: 200px">@item.Description02</textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                                    <input name="title3" maxlength="50" class="form-control" value="@item.SubTitle03" />
+                                                </div>
+
+                                                @if (item.Image01 != null)
+                                                {
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                        <br />
+                                                        <input type="file" name="image3" accept="image/*" multiple="multiple" />
+                                                        <img src="~/Images/NewHouse/imagehomepage/@item.Image03" style="width:100%" />
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                        <br />
+                                                        <input type="file" name="image3" accept="image/*" multiple="multiple" />
+                                                    </div>
+                                                }
+
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Miêu tả (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                                    <textarea name="des3" class="form-control" maxlength="200" rows="20" cols="50" style="height: 200px">@item.Description03</textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                                    <input name="title4" maxlength="50" class="form-control" value="@item.SubTitle04" />
+                                                </div>
+
+                                                @if (item.Image01 != null)
+                                                {
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                        <br />
+                                                        <input type="file" name="image4" accept="image/*" multiple="multiple" />
+                                                        <img src="~/Images/NewHouse/imagehomepage/@item.Image04" style="width:100%" />
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                        <br />
+                                                        <input type="file" name="image4" accept="image/*" multiple="multiple" />
+                                                    </div>
+                                                }
+
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Miêu tả (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                                    <textarea name="des4" class="form-control" maxlength="200" rows="20" cols="50" style="height: 200px">@item.Description04</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input class="btn btn-primaryt" type="submit" value="Lưu" />
+                                    }
+                                }
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-12" id="en" style="display:none">
+                    <div class="single-form">
+                        <div class="section-head">
+                            <div class="title">
+                                <h4>Chỉnh sửa trang chủ</h4>
+                            </div>
+                        </div>
+
+                        <div class="section-body">
+                            <form action="/homepage/edit" method="post" enctype="multipart/form-data">
+                                @foreach (var item in Model)
+                                {
+                                    if (item.ID == 2)
+                                    {
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 100 KÍ TỰ)</label>
+                                            <input name="title" maxlength="100" class="form-control" value="@item.Title01" />
+                                            <input name="lang" value="vn" type="hidden" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput4">Nội dung</label>
+                                            <textarea name="content" id="editor1">@item.Description</textarea>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                                    <input name="title1" maxlength="50" class="form-control" value="@item.SubTitle01" />
+                                                </div>
+
+                                                @if (item.Image01 != null)
+                                                {
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                        <br />
+                                                        <input type="file" name="images1" accept="image/*" />
+                                                        <img src="~/Images/b.Deli/imageHome/@item.Image01" style="width:100%" />
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                        <br />
+                                                        <input type="file" name="images1" accept="image/*" />
+                                                    </div>
+                                                }
+
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Miêu tả (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                                    <textarea name="des1" class="form-control" maxlength="200" rows="20" cols="50" style="height: 200px">@item.Description01</textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                                    <input name="title2" maxlength="50" class="form-control" value="@item.SubTitle02" />
+                                                </div>
+
+                                                @if (item.Image01 != null)
+                                                {
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                        <br />
+                                                        <input type="file" name="images2" accept="image/*" />
+                                                        <img src="~/Images/b.Deli/imageHome/@item.Image02" style="width:100%" />
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                        <br />
+                                                        <input type="file" name="images2" accept="image/*" />
+                                                    </div>
+                                                }
+
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Miêu tả (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                                    <textarea name="des2" class="form-control" maxlength="200" rows="20" cols="50" style="height: 200px">@item.Description02</textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                                    <input name="title3" maxlength="50" class="form-control" value="@item.SubTitle03" />
+                                                </div>
+
+                                                @if (item.Image01 != null)
+                                                {
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                        <br />
+                                                        <input type="file" name="images3" accept="image/*" />
+                                                        <img src="~/Images/b.Deli/imageHome/@item.Image03" style="width:100%" />
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                        <br />
+                                                        <input type="file" name="images3" accept="image/*" />
+                                                    </div>
+                                                }
+
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Miêu tả (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                                    <textarea name="des3" class="form-control" maxlength="200" rows="20" cols="50" style="height: 200px">@item.Description03</textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                                    <input name="title4" maxlength="50" class="form-control" value="@item.SubTitle04" />
+                                                </div>
+
+                                                @if (item.Image01 != null)
+                                                {
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                        <br />
+                                                        <input type="file" name="images4" accept="image/*" />
+                                                        <img src="~/Images/b.Deli/imageHome/@item.Image04" style="width:100%" />
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                        <br />
+                                                        <input type="file" name="images4" accept="image/*" />
+                                                    </div>
+                                                }
+
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Miêu tả (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                                    <textarea name="des4" class="form-control" maxlength="200" rows="20" cols="50" style="height: 200px">@item.Description04</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input class="btn btn-primaryt" type="submit" value="Lưu" />
+                                    }
+                                }
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .catch(error => {
+            console.error(error);
+        });
+    ClassicEditor
+        .create(document.querySelector('#editor1'))
+        .catch(error => {
+            console.error(error);
+        });
+    $("#opt").on("change", function () {
+        $("#" + $(this).val()).show().siblings().hide();
+        $("#head").show();
+        $("#choose").show();
+    })
+</script>

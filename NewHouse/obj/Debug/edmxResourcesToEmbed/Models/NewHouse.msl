@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NewHouseModelStoreContainer" CdmEntityContainer="NewHouseEntities">
+    <EntitySetMapping Name="NH_Contact">
+      <EntityTypeMapping TypeName="NewHouseModel.NH_Contact">
+        <MappingFragment StoreEntitySet="NH_Contact">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NH_Feature">
+      <EntityTypeMapping TypeName="NewHouseModel.NH_Feature">
+        <MappingFragment StoreEntitySet="NH_Feature">
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Icon01" ColumnName="Icon01" />
+          <ScalarProperty Name="Title01" ColumnName="Title01" />
+          <ScalarProperty Name="Description01" ColumnName="Description01" />
+          <ScalarProperty Name="Icon02" ColumnName="Icon02" />
+          <ScalarProperty Name="Title02" ColumnName="Title02" />
+          <ScalarProperty Name="Description02" ColumnName="Description02" />
+          <ScalarProperty Name="Icon03" ColumnName="Icon03" />
+          <ScalarProperty Name="Title03" ColumnName="Title03" />
+          <ScalarProperty Name="Description03" ColumnName="Description03" />
+          <ScalarProperty Name="Icon04" ColumnName="Icon04" />
+          <ScalarProperty Name="Title04" ColumnName="Title04" />
+          <ScalarProperty Name="Description04" ColumnName="Description04" />
+          <ScalarProperty Name="Icon05" ColumnName="Icon05" />
+          <ScalarProperty Name="Title05" ColumnName="Title05" />
+          <ScalarProperty Name="Description05" ColumnName="Description05" />
+          <ScalarProperty Name="Icon06" ColumnName="Icon06" />
+          <ScalarProperty Name="Title06" ColumnName="Title06" />
+          <ScalarProperty Name="Description06" ColumnName="Description06" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NH_Homepage">
+      <EntityTypeMapping TypeName="NewHouseModel.NH_Homepage">
+        <MappingFragment StoreEntitySet="NH_Homepage">
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title01" ColumnName="Title01" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SubTitle01" ColumnName="SubTitle01" />
+          <ScalarProperty Name="Image01" ColumnName="Image01" />
+          <ScalarProperty Name="Description01" ColumnName="Description01" />
+          <ScalarProperty Name="SubTitle02" ColumnName="SubTitle02" />
+          <ScalarProperty Name="Image02" ColumnName="Image02" />
+          <ScalarProperty Name="Description02" ColumnName="Description02" />
+          <ScalarProperty Name="SubTitle03" ColumnName="SubTitle03" />
+          <ScalarProperty Name="Image03" ColumnName="Image03" />
+          <ScalarProperty Name="Description03" ColumnName="Description03" />
+          <ScalarProperty Name="SubTitle04" ColumnName="SubTitle04" />
+          <ScalarProperty Name="Image04" ColumnName="Image04" />
+          <ScalarProperty Name="Description04" ColumnName="Description04" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NH_Intro">
+      <EntityTypeMapping TypeName="NewHouseModel.NH_Intro">
+        <MappingFragment StoreEntitySet="NH_Intro">
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NH_News">
+      <EntityTypeMapping TypeName="NewHouseModel.NH_News">
+        <MappingFragment StoreEntitySet="NH_News">
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Images" ColumnName="Images" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NH_Project">
+      <EntityTypeMapping TypeName="NewHouseModel.NH_Project">
+        <MappingFragment StoreEntitySet="NH_Project">
+          <ScalarProperty Name="ArchitectID" ColumnName="ArchitectID" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="Images" ColumnName="Images" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NH_Solution">
+      <EntityTypeMapping TypeName="NewHouseModel.NH_Solution">
+        <MappingFragment StoreEntitySet="NH_Solution">
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="SolutionContent" ColumnName="SolutionContent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NH_AboutUs">
+      <EntityTypeMapping TypeName="NewHouseModel.NH_AboutUs">
+        <MappingFragment StoreEntitySet="NH_AboutUs">
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NH_Partner">
+      <EntityTypeMapping TypeName="NewHouseModel.NH_Partner">
+        <MappingFragment StoreEntitySet="NH_Partner">
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NH_Partnership">
+      <EntityTypeMapping TypeName="NewHouseModel.NH_Partnership">
+        <MappingFragment StoreEntitySet="NH_Partnership">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NH_Slider">
+      <EntityTypeMapping TypeName="NewHouseModel.NH_Slider">
+        <MappingFragment StoreEntitySet="NH_Slider">
+          <ScalarProperty Name="Image06" ColumnName="Image06" />
+          <ScalarProperty Name="SubTitle06" ColumnName="SubTitle06" />
+          <ScalarProperty Name="Title06" ColumnName="Title06" />
+          <ScalarProperty Name="Image05" ColumnName="Image05" />
+          <ScalarProperty Name="SubTitle05" ColumnName="SubTitle05" />
+          <ScalarProperty Name="Title05" ColumnName="Title05" />
+          <ScalarProperty Name="Image04" ColumnName="Image04" />
+          <ScalarProperty Name="SubTitle04" ColumnName="SubTitle04" />
+          <ScalarProperty Name="Title04" ColumnName="Title04" />
+          <ScalarProperty Name="Image03" ColumnName="Image03" />
+          <ScalarProperty Name="SubTitle03" ColumnName="SubTitle03" />
+          <ScalarProperty Name="Title03" ColumnName="Title03" />
+          <ScalarProperty Name="Image02" ColumnName="Image02" />
+          <ScalarProperty Name="SubTitle02" ColumnName="SubTitle02" />
+          <ScalarProperty Name="Title02" ColumnName="Title02" />
+          <ScalarProperty Name="Image01" ColumnName="Image01" />
+          <ScalarProperty Name="SubTitle01" ColumnName="SubTitle01" />
+          <ScalarProperty Name="Title01" ColumnName="Title01" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NH_Architec">
+      <EntityTypeMapping TypeName="NewHouseModel.NH_Architec">
+        <MappingFragment StoreEntitySet="NH_Architec">
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

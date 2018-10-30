@@ -1,0 +1,160 @@
+﻿@using NewHouse.Models;
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    NewHouseEntities db = new NewHouseEntities();
+    var lst = db.NH_Architec.ToList();
+
+}
+
+<div class="main-wrapper">
+    <div class="container">
+
+        <!-- Start breadcrumb section  -->
+        <div class="row">
+            <div class="col-lg-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/webmaster/index">Trang chủ</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Quản lí Dự án</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="col-lg-12" id="choose">
+            <div class="row">
+                <h5 class="mb col-lg-2" style="color:white;">Ngôn ngữ: </h5>
+                <select class="form-control col-lg-3" id="opt" name="opt" style="width:15%; margin-left:-35px">
+                    <option value="vn" selected>Tiếng Việt</option>
+                    <option value="en">Tiếng Anh</option>
+                </select>
+            </div>
+        </div>
+        <br />
+
+        <!-- Start form -->
+        <div class="form-area">
+            <div class="row">
+
+                <div class="col-lg-12" id="vn">
+                    <div class="single-form">
+                        <div class="section-head">
+                            <div class="title">
+                                <h4>Thêm dự án</h4>
+                            </div>
+                        </div>
+
+                        <div class="section-body">
+                            <form action="/projectmaster/add" method="post" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 100 KÍ TỰ)</label>
+                                    <input name="title" maxlength="100" class="form-control" />
+                                    <input value="vn" name="lang" type="hidden" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlFile1">Hình ảnh đại diện (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 800x600 HOẶC LỚN HƠN)</label>
+                                    <br />
+                                    <input type="file" name="avatar" accept="image/*" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1280x763 HOẶC LỚN HƠN)</label>
+                                    <br />
+                                    <input type="file" name="images" accept="image/*" multiple="multiple" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput4">Nội dung</label>
+                                    <textarea name="content" id="editor"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Kiến trúc sư</label>
+                                    <select name='kts' class='form-control' style="width:25%">
+                                        @foreach (var item in lst)
+                                        {
+                                            <option value="@item.ID">@item.Name</option>
+                                        }
+
+                                    </select>
+                                </div>
+
+                                <input class="btn btn-primaryt" type="submit" value="Lưu" />
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-12" id="en" style="display:none">
+                    <div class="single-form">
+                        <div class="section-head">
+                            <div class="title">
+                                <h4>Thêm dự án</h4>
+                            </div>
+                        </div>
+
+                        <div class="section-body">
+                            <form action="/projectmaster/add" method="post" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 100 KÍ TỰ)</label>
+                                    <input name="title" maxlength="100" class="form-control" />
+                                    <input value="en" name="lang" type="hidden" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlFile1">Hình ảnh đại diện (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 800x600 HOẶC LỚN HƠN)</label>
+                                    <br />
+                                    <input type="file" name="avatar" accept="image/*" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1280x763 HOẶC LỚN HƠN)</label>
+                                    <br />
+                                    <input type="file" name="images" accept="image/*" multiple="multiple" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput4">Nội dung</label>
+                                    <textarea name="content" id="editor1"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Kiến trúc sư</label>
+                                    <select name='kts' class='form-control' style="width:25%">
+                                        @foreach (var item in lst)
+                                        {
+                                            <option value="@item.ID">@item.Name</option>
+                                        }
+
+                                    </select>
+                                </div>
+
+                                <input class="btn btn-primaryt" type="submit" value="Lưu" />
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .catch(error => {
+            console.error(error);
+        });
+    ClassicEditor
+        .create(document.querySelector('#editor1'))
+        .catch(error => {
+            console.error(error);
+        });
+    $("#opt").on("change", function () {
+        $("#" + $(this).val()).show().siblings().hide();
+        $("#head").show();
+        $("#choose").show();
+    })
+</script>
+

@@ -1,0 +1,75 @@
+﻿@model NewHouse.Models.NH_Project
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string[] arrStr;
+}
+
+<div id="home">
+    <div id="home-parallex-project1" class="section" style="background: url(../../Images/NewHouse/imageproject/@Model.Avatar) 50% 0 no-repeat fixed;">
+        <div class="home-content-main">
+            <div class="table-cell">
+                <div class="container visible-container">
+                    <div class="row home-row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="home-text-architect text-left">
+                                <h3>@Model.ProjectName</h3>
+
+                            </div><!-- end home-text  -->
+                        </div><!-- end col-md-10 -->
+                    </div><!-- end row  -->
+                </div><!-- end container -->
+            </div><!-- end table-cell -->
+        </div><!-- end home-content-main -->
+        <div class="parallax" data-velocity="-.1"></div>
+        <div class="parallax" data-velocity="-.5" data-fit="525"></div>
+    </div><!-- end home-parallex  -->
+</div><!-- end home  -->
+<!-- ============================================== TEAM ================= -->
+<div id="team">
+    <div class="about-content-project">
+        <div class="us-grid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="about-title-project text-left wow fadeIn">
+                            <h3>@Model.ProjectName</h3>
+                            <div class="underline1"></div>
+                            <div class="underline2"></div>
+                            @Html.Raw(Model.Description)
+                        </div><!-- end team-title  -->
+                    </div><!-- end col-md-12  -->
+
+                    <div class="col-md-12 col-sm-6 ">
+                        <div class="about-details-center wow fadeIn">
+                            <div class="about-image-solution wow fadeIn">
+                                @if (Model.Images != null)
+                                {
+                                    if (Model.Images.Contains(","))
+                                    {
+                                        arrStr = Model.Images.Split(',');
+                                        foreach (var item in arrStr)
+                                        {
+                                            <img src="~/Images/NewHouse/imageproject/@item" alt="" class="about-img">
+                                            <br>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <img src="~/Images/NewHouse/imageproject/@Model.Images" alt="" class="about-img">
+                                        <br>
+                                    }
+                                }
+                            </div><!-- end about-image  -->
+                        </div><!-- end about-details  -->
+                    </div><!-- end col-md-12  -->
+                </div><!-- end row  -->
+            </div><!-- end container  -->
+        </div><!-- end me-grid  -->
+    </div>
+</div><!-- end team  -->
+<div class="copyright-details">
+    <div class="copyright">
+        <h3>copyright and design: Newhouse Building Solution</h3>
+    </div><!-- end copyright -->
+</div><!-- end copyright-details -->

@@ -1,0 +1,177 @@
+/*================================================================ Default ===================================================================*/
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #f06710;
+}
+.overlay {
+    background-color: rgba(236, 122, 25, 0.8);
+}
+.option {
+    background-color: #f06710;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: #f06710 !important;
+    background-color: transparent;
+}
+.navbar-default.small .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: #f06710 !important;
+    background-color: transparent;
+}
+.site-title h3 {
+    color: #f06710;
+}
+.navbar-default.small .site-title h3 {
+    color: #f06710;
+    margin: 24px 0px;
+}
+.carousel-indicators .active {
+    background-color: #f06710;
+}
+.home-text h3 {
+    color: #f06710;
+}
+.home-contact1 {
+    background-color: #f06710;
+    border: 1px solid #f06710;
+}
+.features-title h3 {
+    color: #f06710;
+}
+.features-icon {
+    color: #f06710;
+}
+.features-details:hover h3{
+    color: #f06710;
+}
+.underline1 {
+    background-color: #f06710;
+}
+.underline2{
+    background-color: #f06710;
+}
+#about {
+    background-color: #f06710;
+}
+.about-details a {
+    color: #f06710;
+        border: 1px solid #f06710;
+
+}
+.stat-icon {
+    color: #f06710;
+}
+.screenshot-title h3 {
+    color: #f06710;
+}
+.about-indicators li {
+    background: #f06710;
+}
+
+.about-indicators.active {
+    background: #f06710;
+}
+.screenshot-img{
+    border: 3px solid #f06710;
+}
+.video-icon {
+    color: #f06710;
+}
+.video-grid a:hover{
+    text-decoration: none;
+    color: #24d8d2;
+}
+.service-title h3 {
+    color: #f06710;
+}
+.media-body h3 {
+    color: #f06710;
+}
+.ser-icon {
+    border: 1px solid #f06710;
+    padding: 3px;
+}
+.service-icon {
+    background-color: #f06710;
+}
+.team-title h3 {
+    color: #f06710;
+}
+.team-details {
+    background-color: #f06710;
+}
+.team-social li a {
+    background-color: #f06710;
+}
+.team-social li a:hover {
+    color: #f06710;
+}
+.price-title h3 {
+    color: #f06710;
+}
+.price-pack-head h3 {
+    background-color: #f06710;
+}
+.price-pack-head p span {
+    color: #f06710;
+}
+.price-contact {
+    color: #f06710;
+    border: 1px solid #f06710;
+}
+.price-pack:hover .price-contact{
+    background-color: #f06710;
+}
+#testimonial{
+    background-color: #f06710;
+}
+.contact-title h3 {
+    color: #f06710;
+}
+.btn-success.disabled {
+    background-color: #f06710;
+    border-color: #f06710;
+}
+.btn.disabled:hover{
+    background-color: #f06710;
+    border-color: #f06710;
+}
+.btn-success:hover{
+    background-color: #f06710;
+    border-color: #f06710;
+}
+.btn-success {
+    background-color: #f06710;
+    border-color: #f06710;
+}
+.contact-col {
+    background-color: #f06710;
+}
+.contact-icon {
+    color: #f06710;
+}
+.copyright-details{
+    background-color: #f06710;
+    margin-top: 100px;
+}
+@media screen and (max-width: 768px) {
+    .navbar-default.small .site-title h3 {
+        color: #f06710;
+        margin: 9px 0px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .navbar-default.small .site-title h3 {
+        color: #f06710;
+        margin: 26px 0px;
+    }
+}
+
+
+
+
+
+
+
+
+
+

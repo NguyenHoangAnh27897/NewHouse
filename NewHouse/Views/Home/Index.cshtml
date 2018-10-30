@@ -1,0 +1,1574 @@
+﻿@model IEnumerable<NewHouse.Models.Data>
+@{
+    /**/
+
+    ViewBag.Title = "Home Page";
+    int i = 0;
+    int j = 0;
+}
+@if (ViewBag.OPT == 0)
+{
+    <div id="home">
+        <div class="home-content">
+            <div class="home-content-main-slider">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                        <li data-target="#myCarousel" data-slide-to="4"></li>
+                        <li data-target="#myCarousel" data-slide-to="5"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active" style="background-image: url(../../Images/NewHouse/imageslider/@Model.FirstOrDefault().slider.Image01);">
+                            <div class="home-slider-1st">
+                                <div class="table-cell">
+                                    <div class="home-text">
+                                        <h1>@Model.FirstOrDefault().slider.Title01</h1>
+                                        <h2><b>@Model.FirstOrDefault().slider.SubTitle01</b></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item" style="background-image: url(../../Images/NewHouse/imageslider/@Model.FirstOrDefault().slider.Image02);">
+                            <div class="home-slider-0">
+                                <div class="table-cell">
+                                    <div class="home-text">
+                                        <h1>@Model.FirstOrDefault().slider.Title02</h1>
+                                        <h2><b>@Model.FirstOrDefault().slider.SubTitle02</b></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item" style="background-image: url(../../Images/NewHouse/imageslider/@Model.FirstOrDefault().slider.Image03);">
+                            <div class="home-slider-1">
+                                <div class="table-cell">
+                                    <div class="home-text">
+                                        <h1>@Model.FirstOrDefault().slider.Title03</h1>
+                                        <h2><b>@Model.FirstOrDefault().slider.SubTitle03</b></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item" style="background-image: url(../../Images/NewHouse/imageslider/@Model.FirstOrDefault().slider.Image04);">
+                            <div class="home-slider-2">
+                                <div class="table-cell">
+                                    <div class="home-text">
+                                        <h1>@Model.FirstOrDefault().slider.Title04</h1>
+                                        <h2><b>@Model.FirstOrDefault().slider.SubTitle04</b></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item" style="background-image: url(../../Images/NewHouse/imageslider/@Model.FirstOrDefault().slider.Image05);">
+                            <div class="home-slider-3">
+                                <div class="table-cell">
+                                    <div class="home-text">
+                                        <h1>@Model.FirstOrDefault().slider.Title05</h1>
+                                        <h2><b>@Model.FirstOrDefault().slider.SubTitle05</b></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item" style="background-image: url(../../Images/NewHouse/imageslider/@Model.FirstOrDefault().slider.Image06);">
+                            <div class="home-slider-4">
+                                <div class="table-cell">
+                                    <div class="home-text">
+                                        <h1>@Model.FirstOrDefault().slider.Title06</h1>
+                                        <h2><b>@Model.FirstOrDefault().slider.SubTitle06</b></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                    </a>
+                    <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                    </a>
+                </div>
+            </div><!-- end home-content-main -->
+        </div><!-- end home-parallex  -->
+    </div><!-- end home  -->
+    <!-- ============================================== TEAM ================= -->
+    <div id="team">
+        <div class="about-content1">
+            <div class="us-grid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="about-title text-left wow fadeIn">
+                                <h3>CÁC GIẢI PHÁP CÔNG NGHỆ CỦA NEW HOUSE</h3>
+                                <div class="underlinewhite1"></div>
+                                <div class="underlinewhite2"></div>
+                            </div><!-- end team-title  -->
+                        </div><!-- end col-md-12  -->
+                        <div class="col-md-5 col-sm-6 ">
+                            <div class="about-image-solution wow fadeIn">
+                                <img src="~/Content/NewHouse/img/Cell system.png" alt="" class="about-img">
+                            </div><!-- end about-image  -->
+                        </div><!-- end col-md-6  -->
+                        <div class="col-md-7 col-sm-6">
+                            <div class="about-details-solutions wow fadeIn">
+                                <h3 class="wow fadeIn">CẤU TRÚC SANDWICH</h3>
+                                <p class="wow fadeIn">
+                                    Thay thế kết cấu truyền thống bê tông cho sàn và tường dựa trên kết cấu khung bằng phương pháp kết hợp các lớp chịu lực, cấu tạo, xen kẽ tạo ra những tấm sàn tường chịu lực cao được áp dụng từ lâu trong thiết kế kết cấu hiện đại.<br>
+                                    Sự sáng tạo đặc biệt của New House System khi thay hệ keo tổng hợp tại nhà máy của tấm sandwich panel truyền thống bằng hệ nối smart lock, cho phép xấy dựng những tấm sàn - tường chịu lực vượt nhịp lớn lên đến 9m không cần khung có thể lắp đặt dễ dàng với 2 công nhân khỏe mạnh.<br>
+                                    Ngoài ra áp dụng công nghệ gfc composite cho pháp các lớp chịu lực thay thế cho gỗ và thép trong môi trường vùng biển giải quyết bài toán khó cho hệ sandwich truyền thống đang gặp phải không ứng dụng được.<br>
+                                    Multilayer structure solution developed and certified in 2016.
+                                </p>
+                            </div><!-- end about-details  -->
+                        </div><!-- end col-md-6  -->
+                        <div class="col-md-5 col-sm-6 ">
+                            <div class="about-image-solution wow fadeIn">
+                                <img src="~/Content/NewHouse/img/cell system 2.png" alt="" class="about-img">
+                            </div><!-- end about-image  -->
+                        </div><!-- end col-md-6  -->
+                        <div class="col-md-7 col-sm-6">
+                            <div class="about-details-solutions wow fadeIn">
+                                <h3 class="wow fadeIn">HỆ HOÀN THIỆN TẾ BÀO</h3>
+                                <p class="wow fadeIn">
+                                    Tất cả các hoàn thiện truyền thống thường được thực hiện tại công trường với nhiều rủi ro chất lượng gây ra sự tốn kém thời gian và không dùng lại được khi thay thế cho các hệ sàn và gạch.<br>
+                                    New house system phát triển triệt để các lớp hoàn thiện truyền thống gắn kết với lớp kết cấu qua hệ clips và modul era các tấm độc lập có khối lượng nhỏ hơn 10kg/cell cho phép công tác hoàn thiện chính xác như đo cắt và thay thế đễ dàng trong trường hợp hư hỏng và đổi mới.<br>
+                                    Hệ cell system của new house gần như ứng dụng cho tất cả các lớp hoàn thiện toàn diện như: đá gỗ, kim loại, một số hệ gạch, kính các loại. Thậm chí có cả green roof và green wall.<br>
+                                    Cho phép hoàn thiện trên bất kì bề mặt nào bằng cách chia nhỏ các bề mặt từ các hệ đơn nhịp đơn giản đến hệ paramatric phức tạp hơn.
+                                </p>
+                            </div><!-- end about-details  -->
+                        </div><!-- end col-md-6  -->
+                        <div class="col-md-5 col-sm-6 ">
+                            <div class="about-image-solution wow fadeIn">
+                                <img src="~/Content/NewHouse/img/cell system 3.png" alt="" class="about-img">
+                            </div><!-- end about-image  -->
+                        </div><!-- end col-md-6  -->
+                        <div class="col-md-7 col-sm-6">
+                            <div class="about-details-solutions wow fadeIn">
+                                <h3 class="wow fadeIn">CẤU TẠO ĐA LỚP</h3>
+                                <p class="wow fadeIn">
+                                    Một truyệt tác sáng tạo của new house là tác tất cả các lớp: kết cấu - cấu tạo - chống thấm - hoàn thiện ra nhiều lớp khác nhau hoạt động độc lập hoặc kết hợp chịu lực cho phép dễ dàng thay thế, dễ dàng lắp đặt và đến 100% được sản xuất sẵn tại nhà máy với chất lượng ổn định và kiểm soát.<br>
+                                    Multilayer method cho pháp xấy dựng bất kì 1 loại nhà nào theo thiết kế hiện đại hay cổ điểm tuy nhiên với thiết kế mới và tiêu chí mới, chúng tôi ưu tiên phát triển các thiết kế hiện đại với khuynh hướng tối giản tạo nên sự thanh lịch và ấn tượng.<br>
+                                    Cho phép các lớp cấu tạo hoàn toàn độc lập không kết dính bang keo, tạo sự thay thế bảo trì dễ dàng.
+                                </p>
+                            </div><!-- end about-details  -->
+                        </div><!-- end col-md-6  -->
+
+                        <div class="col-md-7 col-sm-6">
+                            <div class="about-details-right wow fadeIn">
+                                <h3 class="wow fadeIn">CÔNG NGHỆ XỬ LÝ GỖ</h3>
+                                <div class="underline1 white"></div>
+                                <div class="underline2 white"></div>
+                                <div class="underline about-underline"></div>
+                                <p class="wow fadeIn"></p>
+                                <h4 class="wow fadeIn">XỬ LÍ</h4>
+                                <div class="underlinewhite1"></div>
+                                <div class="underlinewhite2"></div>
+                                <p class="wow fadeIn">Xử lý gỗ bằng công nghệ OIL PRESSURE TREATMENT: phát triển và xử lý bởi công ty<b>TIMBALINK</b>, với các mức độ chất lượng từ <b>H1 đến H4</b> được bảo đảm trong môi trường ngoài trời với mức bảo hành lên đến 25 năm</p>
+                                <p class="wow fadeIn">Công nghệ <b>THERMOS TREATMENT</b>, đảm bảo chất lượng gỗ bằng phương pháp xử lý nhiệt được cung ứng và phát triển tại Việt Nam bởi công ty <b>VINAPLACE</b>.</p>
+                                <h4 class="wow fadeIn">CẤU TRÚC MỚI</h4>
+                                <div class="underlinewhite1"></div>
+                                <div class="underlinewhite2"></div>
+                                <p class="wow fadeIn">hệ dầm gỗ vượt nhip cao. <b>GLULAM BEAM</b>, <b>Hệ sàn gỗ CLT</b>, <b>Hệ GRIDCELL DOME</b> được cung cấp bởi công ty <b>NEWZEALAND HOUSE</b>.</p>
+                                <p class="wow fadeIn">Hệ Parametric được hợp tác với <b>ABTRACTOR</b>.</p>
+                            </div><!-- end about-details  -->
+                        </div><!-- end col-md-6  -->
+                        <div class="col-md-5 col-sm-6 ">
+                            <div class="about-image wow fadeIn">
+                                <img src="~/Content/NewHouse/img/woodstruc.png" alt="" class="about-img">
+                            </div><!-- end about-image  -->
+                        </div><!-- end col-md-6  -->
+
+                        <div class="col-md-4 col-sm-6 ">
+                            <div class="about-image wow fadeIn">
+                                <img src="~/Content/NewHouse/img/1material.jpg" alt="" class="about-img">
+                            </div><!-- end about-image  -->
+                            <div class="about-image wow fadeIn">
+                                <img src="~/Content/NewHouse/img/2material.png" alt="" class="about-img">
+                            </div><!-- end about-image  -->
+                        </div><!-- end col-md-6  -->
+                        <div class="col-md-8 col-sm-6">
+                            <div class="about-details wow fadeIn">
+                                <h3 class="wow fadeIn">NGUYÊN LIỆU</h3>
+                                <div class="underline1 white"></div>
+                                <div class="underline2 white"></div>
+                                <div class="underline about-underline"></div>
+                                <p class="wow fadeIn">CẤU KIỆN GFRC SẢN XUẤT TẠI NHẬT VÀ VIỆT NAM</p>
+                            </div><!-- end about-details  -->
+                        </div><!-- end col-md-6  -->
+
+                        <div class="col-md-12 col-sm-6 ">
+                            <div class="about-details-center wow fadeIn">
+                                <p class="wow fadeIn">ESSENTIAL TO LAYOUT<br>TRỌNG LƯỢNG NHẸ ĐỂ DỰNG LÊN<br>90% ĐƯỢC LÀM TẠI XƯỞNG<br>4 NGƯỜI CÓ THỂ XÂY DỰNG TRONG 3 NGÀY<br>TÁI SỬ DỤNG 100%</p>
+                            </div><!-- end about-details  -->
+                        </div><!-- end col-md-6  -->
+                    </div><!-- end row  -->
+                </div><!-- end container  -->
+            </div><!-- end me-grid  -->
+        </div>
+        <div class="team-content">
+            <div class="team-grid text-left">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="team-title text-left wow fadeIn">
+                                <h3>@Model.FirstOrDefault().hp.Title01</h3>
+                                <div class="underline1"></div>
+                                <div class="underline2"></div>
+                                @Html.Raw(Model.FirstOrDefault().hp.Description)
+                            </div><!-- end team-title  -->
+                        </div><!-- end col-md-12  -->
+                    </div><!-- end row  -->
+                    <div class="row team-row text-left">
+                        <div class="col-md-3 col-sm-6 team-col">
+                            <div class="corporate-team">
+                                <div class="team-member wow fadeIn" data-wow-delay=".2s">
+                                    <div class="overlay text-left">
+                                        <div class="overlay-main">
+                                            <div class="table-cell">
+                                                <a href="log.html">
+                                                    <h3>@Model.FirstOrDefault().hp.SubTitle01</h3>
+                                                    <p>@Model.FirstOrDefault().hp.Description01</p>
+                                                </a>
+                                                <div class="team-icon-grid">
+                                                    <div class="team-icon text-left">
+                                                        <ul class="team-social">
+                                                            <li><a href="www.facebook.com" target="newtab"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.twitter.com" target="newtab"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.pinterest.com" target="newtab"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.instagram.com" target="newtab"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                                        </ul>
+                                                    </div><!-- end team-icon  -->
+                                                </div><!-- end team-icon-grid  -->
+                                            </div><!-- end table-cell  -->
+                                        </div><!-- end overlay-main  -->
+                                    </div><!-- end overlay  -->
+                                    <img src="~/Images/NewHouse/imagehomepage/@Model.FirstOrDefault().hp.Image01" alt="" class="team-img-testing">
+                                </div><!-- end team-member  -->
+                                <div class="team-details">
+                                    <a href="log.html"><h3>@Model.FirstOrDefault().hp.SubTitle01</h3></a>
+                                </div><!-- end team-details  -->
+                            </div><!-- end corporate-team  -->
+                        </div><!-- end col-md-3  -->
+                        <div class="col-md-3 col-sm-6 team-col">
+                            <div class="corporate-team">
+                                <div class="team-member wow fadeIn" data-wow-delay=".2s">
+                                    <div class="overlay text-left">
+                                        <div class="overlay-main">
+                                            <div class="table-cell">
+                                                <a href="slab.html">
+                                                    <h3>@Model.FirstOrDefault().hp.SubTitle02</h3>
+                                                    <p>@Model.FirstOrDefault().hp.Description02</p>
+                                                </a>
+                                                <div class="team-icon-grid">
+                                                    <div class="team-icon text-left">
+                                                        <ul class="team-social">
+                                                            <li><a href="www.facebook.com" target="newtab"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.twitter.com" target="newtab"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.pinterest.com" target="newtab"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.instagram.com" target="newtab"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                                        </ul>
+                                                    </div><!-- end team-icon  -->
+                                                </div><!-- end team-icon-grid  -->
+                                            </div><!-- end table-cell  -->
+                                        </div><!-- end overlay-main  -->
+                                    </div><!-- end overlay  -->
+                                    <img src="~/Images/NewHouse/imagehomepage/@Model.FirstOrDefault().hp.Image02" alt="" class="team-img-testing">
+                                </div><!-- end team-member  -->
+                                <div class="team-details">
+                                    <a href="slab.html"><h3>@Model.FirstOrDefault().hp.SubTitle02</h3></a>
+                                </div><!-- end team-details  -->
+                            </div><!-- end corporate-team  -->
+                        </div><!-- end col-md-3  -->
+                        <div class="col-md-3 col-sm-6 team-col">
+                            <div class="corporate-team">
+                                <div class="team-member wow fadeIn" data-wow-delay=".2s">
+                                    <div class="overlay text-left">
+                                        <div class="overlay-main">
+                                            <div class="table-cell">
+                                                <a href="kolumn.html">
+                                                    <h3>@Model.FirstOrDefault().hp.SubTitle03</h3>
+                                                    <p>@Model.FirstOrDefault().hp.Description03</p>
+                                                </a>
+                                                <div class="team-icon-grid">
+                                                    <div class="team-icon text-left">
+                                                        <ul class="team-social">
+                                                            <li><a href="www.facebook.com" target="newtab"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.twitter.com" target="newtab"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.pinterest.com" target="newtab"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.instagram.com" target="newtab"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                                        </ul>
+                                                    </div><!-- end team-icon  -->
+                                                </div><!-- end team-icon-grid  -->
+                                            </div><!-- end table-cell  -->
+                                        </div><!-- end overlay-main  -->
+                                    </div><!-- end overlay  -->
+                                    <img src="~/Images/NewHouse/imagehomepage/@Model.FirstOrDefault().hp.Image03" alt="" class="team-img-testing">
+                                </div><!-- end team-member  -->
+                                <div class="team-details">
+                                    <a href="kolumn.html"><h3>@Model.FirstOrDefault().hp.SubTitle03</h3></a>
+                                </div><!-- end team-details  -->
+                            </div><!-- end corporate-team  -->
+                        </div><!-- end col-md-3  -->
+                        <div class="col-md-3 col-sm-6 team-col">
+                            <div class="corporate-team">
+                                <div class="team-member wow fadeIn" data-wow-delay=".2s">
+                                    <div class="overlay text-left">
+                                        <div class="overlay-main">
+                                            <div class="table-cell">
+                                                <a href="dome.html">
+                                                    <h3>@Model.FirstOrDefault().hp.SubTitle04</h3>
+                                                    <p>@Model.FirstOrDefault().hp.Description04</p>
+                                                </a>
+                                                <div class="team-icon-grid">
+                                                    <div class="team-icon text-left">
+                                                        <ul class="team-social">
+                                                            <li><a href="www.facebook.com" target="newtab"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.twitter.com" target="newtab"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.pinterest.com" target="newtab"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.instagram.com" target="newtab"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                                        </ul>
+                                                    </div><!-- end team-icon  -->
+                                                </div><!-- end team-icon-grid  -->
+                                            </div><!-- end table-cell  -->
+                                        </div><!-- end overlay-main  -->
+                                    </div><!-- end overlay  -->
+                                    <img src="~/Images/NewHouse/imagehomepage/@Model.FirstOrDefault().hp.Image04" alt="" class="team-img-testing">
+                                </div><!-- end team-member  -->
+                                <div class="team-details">
+                                    <a href="dome.html"><h3>@Model.FirstOrDefault().hp.SubTitle04</h3></a>
+                                </div><!-- end team-details  -->
+                            </div><!-- end corporate-team  -->
+                        </div><!-- end col-md-3  -->
+                    </div><!-- end row  -->
+                </div><!-- end container  -->
+            </div><!-- end row-grid  -->
+        </div><!-- end team-content  -->
+    </div><!-- end team  -->
+    <!-- ============================================== FEATURES ===================================================== -->
+
+    <div id="features">
+        <div class="features-content">
+            <div class="features-grid text-left">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="features-title text-left wow fadeIn" data-wow-delay=".2s">
+                                <h3>@Model.FirstOrDefault().fea.Title</h3>
+                                <p>@Model.FirstOrDefault().fea.Description</p>
+                                <br>
+                            </div><!-- end service-title  -->
+                        </div><!-- end col-md-12  -->
+                    </div><!-- end row  -->
+                    <div class="row features-row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="features-details wow fadeIn" data-wow-delay=".4s">
+                                <i class="fa fa-magic features-icon" aria-hidden="true"></i>
+                                <h3>@Model.FirstOrDefault().fea.Title01</h3>
+                                <p>@Model.FirstOrDefault().fea.Description01</p><br>
+                            </div><!-- end service-details  -->
+                        </div><!-- end col-md-4  -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="features-details wow fadeIn" data-wow-delay=".6s">
+                                <i class="fa fa-thumbs-up features-icon" aria-hidden="true"></i>
+                                <h3>@Model.FirstOrDefault().fea.Title02</h3>
+                                <p>@Model.FirstOrDefault().fea.Description02</p>
+                            </div><!-- end service-details  -->
+                        </div><!-- end col-md-4  -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="features-details wow fadeIn" data-wow-delay=".2s">
+                                <i class="fa fa-money features-icon" aria-hidden="true"></i>
+                                <h3>@Model.FirstOrDefault().fea.Title03</h3>
+                                <p>@Model.FirstOrDefault().fea.Description03</p>
+                            </div><!-- end service-details  -->
+                        </div><!-- end col-md-4  -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="features-details wow fadeIn">
+                                <i class="fa fa-pencil-square features-icon" aria-hidden="true"></i>
+                                <h3>@Model.FirstOrDefault().fea.Title04</h3>
+                                <p>@Model.FirstOrDefault().fea.Description04</p>
+                            </div><!-- end service-details  -->
+                        </div><!-- end col-md-4  -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="features-details wow fadeIn" data-wow-delay=".4s">
+                                <i class="fa fa-diamond features-icon" aria-hidden="true"></i>
+                                <h3>@Model.FirstOrDefault().fea.Title05</h3>
+                                <p>@Model.FirstOrDefault().fea.Description05</p>
+                            </div><!-- end service-details  -->
+                        </div><!-- end col-md-4  -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="features-details wow fadeIn" data-wow-delay=".6s">
+                                <i class="fa fa-cogs features-icon" aria-hidden="true"></i>
+                                <h3>@Model.FirstOrDefault().fea.Title06</h3>
+                                <p>@Model.FirstOrDefault().fea.Description06</p>
+                            </div><!-- end service-details  -->
+                        </div><!-- end col-md-4  -->
+                    </div><!-- end row  -->
+                </div><!-- end container  -->
+            </div><!-- end service-grid  -->
+        </div><!-- end service-content  -->
+    </div><!-- end service  -->
+    <!-- ================================ ABOUT =============================== -->
+    <div id="project">
+        <div class="team-content1">
+            <div class="team-grid text-left">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="team-title text-left wow fadeIn">
+                                <h3>DỰ ÁN</h3>
+                                <div class="underline1"></div>
+                                <div class="underline2"></div>
+                            </div><!-- end team-title  -->
+                        </div><!-- end col-md-12  -->
+                    </div><!-- end row  -->
+                    <div class="row team-row text-left">
+                        @foreach (var item in Model.FirstOrDefault().pro)
+                        {
+                            <div class="col-md-3 col-sm-6 team-col">
+                                <div class="corporate-team-project">
+                                    <div class="team-member-project wow fadeIn" data-wow-delay=".2s">
+                                        <div class="overlay text-left">
+                                            <div class="overlay-main">
+                                                <div class="table-cell">
+                                                    <a href="/project/detail/@item.ID">
+                                                        <h3>@item.ProjectName</h3>
+                                                        <p></p>
+                                                    </a>
+                                                </div><!-- end table-cell  -->
+                                            </div><!-- end overlay-main  -->
+                                        </div><!-- end overlay  -->
+                                        <img src="~/Images/NewHouse/imageproject/@item.Avatar" alt="" class="team-img-project">
+                                    </div><!-- end team-member  -->
+                                    <div class="team-details">
+                                        <a href="/project/detail/@item.ID"><h3>@item.ProjectName</h3></a>
+                                    </div><!-- end team-details  -->
+                                </div><!-- end corporate-team  -->
+                            </div><!-- end col-md-3  -->
+                        }
+
+
+                    </div><!-- end row  -->
+
+
+                </div><!-- end container  -->
+            </div><!-- end row-grid  -->
+        </div><!-- end team-content  -->
+    </div>
+    <div class="work-counter text-left" id="counter">
+        <div class="counter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-6 wow fadeIn">
+                        <div class="work-statistics">
+                            <i class="fa fa-pencil-square-o stat-icon" aria-hidden="true"></i>
+                            <h3 class="Count">510</h3>
+                            <div class="underline1"></div>
+                            <div class="underline2"></div>
+                            <p>Orders</p>
+                        </div><!-- end work-statistics  -->
+                    </div><!-- end col-md-3  -->
+                    <div class="col-md-3 col-sm-6 col-xs-6 wow fadeIn">
+                        <div class="work-statistics">
+                            <i class="fa fa-star stat-icon" aria-hidden="true"></i>
+                            <h3 class="Count">1285</h3>
+                            <div class="underline1"></div>
+                            <div class="underline2"></div>
+                            <p>Ratings</p>
+                        </div><!-- end work-statistics  -->
+                    </div><!-- end col-md-3  -->
+                    <div class="col-md-3 col-sm-6 col-xs-6 wow fadeIn">
+                        <div class="work-statistics">
+                            <i class="fa fa-eye stat-icon" aria-hidden="true"></i>
+                            <h3 class="Count">3392</h3>
+                            <div class="underline1"></div>
+                            <div class="underline2"></div>
+                            <p>Reviews</p>
+                        </div><!-- end work-statistics  -->
+                    </div><!-- end col-md-3  -->
+                    <div class="col-md-3 col-sm-6 col-xs-6 wow fadeIn">
+                        <div class="work-statistics">
+                            <i class="fa fa-trophy stat-icon" aria-hidden="true"></i>
+                            <h3 class="Count">3</h3>
+                            <div class="underline1"></div>
+                            <div class="underline2"></div>
+                            <p>Awards</p>
+                        </div><!-- end work-statistics  -->
+                    </div><!-- end col-md-3  -->
+                </div><!-- end row  -->
+            </div><!-- end container-fluid  -->
+        </div><!-- end counter  -->
+    </div><!-- end work-counter  -->
+    <div id="testimonial">
+        <div class="testimonial-content">
+            <div class="testimonial-grid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="testimonial-title text-left wow fadeIn">
+                                <h3>TIN TỨC</h3>
+                                <div class="underline1 white"></div>
+                                <div class="underline2 white bottom"></div>
+                            </div><!-- end testimonial-title  -->
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-details wow fadeIn text-left">
+                    <section id="carousel">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
+                                        <ol class="carousel-indicators carousel-indicators1">
+                                            @foreach (var item in Model.FirstOrDefault().news)
+                                            {
+                                                if (j == 0)
+                                                {
+                                                    <li data-target="#fade-quote-carousel" data-slide-to="@j" class="active"></li>
+                                                }
+                                                else
+                                                {
+                                                    <li data-target="#fade-quote-carousel" data-slide-to="@j"></li>
+                                                }
+                                                j++;
+                                            }
+                                        </ol>
+                                        <div class="carousel-inner">
+                                            @foreach (var item in Model.FirstOrDefault().news)
+                                            {
+                                                if (i == 0)
+                                                {
+                                                    <div class="active item">
+                                                        <blockquote>
+                                                            @Html.Raw(item.Description)
+                                                            <br />
+                                                            <p>@item.Title</p>
+                                                            <div class="star-icon-grid text-left">
+                                                                <i class="fa fa-star-o special-item-icon" aria-hidden="true"></i>
+                                                                <i class="fa fa-star-o special-item-icon" aria-hidden="true"></i>
+                                                                <i class="fa fa-star-o special-item-icon" aria-hidden="true"></i>
+                                                                <i class="fa fa-star-o special-item-icon" aria-hidden="true"></i>
+                                                                <i class="fa fa-star-o special-item-icon" aria-hidden="true"></i>
+                                                            </div><!-- end star-icon-grid -->
+                                                        </blockquote>
+                                                    </div><!-- end item  -->
+                                                }
+                                                else
+                                                {
+                                                    <div class="item">
+                                                        <blockquote>
+                                                            @Html.Raw(item.Description)
+                                                            <br />
+                                                            <p>@item.Title</p>
+                                                            <div class="star-icon-grid text-left">
+                                                                <i class="fa fa-star-o special-item-icon" aria-hidden="true"></i>
+                                                                <i class="fa fa-star-o special-item-icon" aria-hidden="true"></i>
+                                                                <i class="fa fa-star-o special-item-icon" aria-hidden="true"></i>
+                                                                <i class="fa fa-star-o special-item-icon" aria-hidden="true"></i>
+                                                                <i class="fa fa-star-o special-item-icon" aria-hidden="true"></i>
+                                                            </div><!-- end star-icon-grid -->
+                                                        </blockquote>
+                                                    </div><!-- end item  -->
+                                                }
+                                                i++;
+                                            }
+
+
+                                        </div><!-- end carousel-inner  -->
+                                    </div><!-- end carousel-slide  -->
+                                </div><!-- end col-md-8  -->
+                            </div><!-- end row  -->
+                        </div><!-- end container  -->
+                    </section>
+                </div><!-- end testimonials-details  -->
+            </div><!-- end testimonial-grid  -->
+        </div><!-- end testimonial-content  -->
+    </div><!-- end testimonial  -->
+    <!-- ================================ CONTACT =============================== -->
+    <div id="architect">
+        <div class="team-content">
+            <div class="team-grid text-left">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="team-title text-left wow fadeIn">
+                                <h3>@Model.FirstOrDefault().pns.Title</h3>
+                                <!-- <h3>ARCHITECTS - ART WORKS</h3> -->
+                                <div class="underline1"></div>
+                                <div class="underline2"></div>
+
+                                @Html.Raw(Model.FirstOrDefault().pns.Description)
+
+                                <!-- <p><b>NEWHOUSE</b> offers a complete solution for the development and construction of any home designed by the architect.<br><b>WE MAKE YOUR IDEAS COME TRUE.
+                                The masterpiece has no owner<br>
+                                The program finds the master for the masterpiece<br>
+                                AN ARCHITECTURAL WORK CAN NOT BE ASSESSED BEAUTIFUL OR FAST<br>
+                                HAVE BEEN RECEIVED ARCHITECTS THAT NEED TO FIND IT FOR OUR MASTER<br>
+                                COMPLETE CREATIVE, SEARCHING FOR PERSON<br>
+                                ERROR: WORKING TO PUBLIC<br>
+                                Determine your brilliance<br>
+                                REDEMPTION SOCIETY<br>
+                                CONSCIOUS COMMENTS.<br>
+                                SAVE FOR INVESTORS - SAVINGS TO SOCIETY</b>
+                                </p>     -->
+                            </div><!-- end team-title  -->
+                        </div><!-- end col-md-12  -->
+                    </div><!-- end row  -->
+                    <div class="row team-row text-left">
+                        @foreach (var item in Model.FirstOrDefault().ar)
+                        {
+                            <div class="col-md-4 col-sm-6 team-col">
+                                <div class="corporate-team2">
+                                    <div class="team-member2 wow fadeIn" data-wow-delay=".2s">
+                                        <div class="overlay text-left">
+                                            <div class="overlay-main">
+                                                <div class="table-cell">
+                                                    <a href="/architect/index/@item.ID">
+                                                        <h3>@item.Name</h3>
+                                                        <p></p>
+                                                    </a>
+                                                    <div class="team-icon-grid">
+                                                        <div class="team-icon text-left">
+                                                            <ul class="team-social">
+                                                                <li><a href="www.facebook.com" target="newtab"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                                <li><a href="www.twitter.com" target="newtab"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                                <li><a href="www.pinterest.com" target="newtab"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                                                <li><a href="www.instagram.com" target="newtab"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                                            </ul>
+                                                        </div><!-- end team-icon  -->
+                                                    </div><!-- end team-icon-grid  -->
+                                                </div><!-- end table-cell  -->
+                                            </div><!-- end overlay-main  -->
+                                        </div><!-- end overlay  -->
+                                        <img src="~/Images/NewHouse/imagearchitec/@item.Avatar" alt="" class="team-img-architect">
+                                    </div><!-- end team-member  -->
+                                    <div class="team-details">
+                                        <a href="/architect/index/@item.ID"><h3>@item.Name</h3></a>
+                                    </div><!-- end team-details  -->
+                                </div><!-- end corporate-team  -->
+                            </div><!-- end col-md-3  -->
+                        }
+                    </div><!-- end row  -->
+                </div><!-- end container  -->
+            </div><!-- end row-grid  -->
+        </div><!-- end team-content  -->
+    </div><!-- end team  -->
+    <div id="architect">
+        <div class="team-content">
+            <div class="team-grid text-left">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="team-title text-left wow fadeIn">
+                                <h3>ĐỐI TÁC</h3>
+                                <div class="underline1"></div>
+                                <div class="underline2"></div>
+                                <p>
+                                </p>
+                            </div><!-- end team-title  -->
+                        </div><!-- end col-md-12  -->
+                    </div><!-- end row  -->
+                    <div class="row team-row text-left">
+                        @foreach (var item in Model.FirstOrDefault().pn)
+                        {
+                            <div class="col-md-3 col-sm-6 team-col">
+                                <div class="corporate-team-partner">
+                                    <div class="team-member-partner wow fadeIn" data-wow-delay=".2s">
+                                        <div class="overlay text-left">
+                                            <div class="overlay-main">
+                                                <div class="table-cell">
+                                                    <a href="@item.Link">
+                                                        <h3>@item.Name</h3>
+                                                        <p></p>
+                                                    </a>
+                                                    <div class="team-icon-grid">
+                                                        <div class="team-icon text-left">
+                                                            <ul class="team-social">
+                                                                <li><a href="www.facebook.com" target="newtab"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                                <li><a href="www.twitter.com" target="newtab"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                                <li><a href="www.pinterest.com" target="newtab"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                                                <li><a href="www.instagram.com" target="newtab"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                                            </ul>
+                                                        </div><!-- end team-icon  -->
+                                                    </div><!-- end team-icon-grid  -->
+                                                </div><!-- end table-cell  -->
+                                            </div><!-- end overlay-main  -->
+                                        </div><!-- end overlay  -->
+                                        <img src="~/Images/NewHouse/imagepartner/@item.Avatar" alt="" class="team-img-partner">
+                                    </div><!-- end team-member  -->
+                                    <div class="team-details">
+                                        <a href="@item.Link"><h3>@item.Name</h3></a>
+                                    </div><!-- end team-details  -->
+                                </div><!-- end corporate-team  -->
+                            </div><!-- end col-md-3  -->
+                        }
+
+                    </div><!-- end row  -->
+
+                </div><!-- end container  -->
+            </div><!-- end row-grid  -->
+        </div><!-- end team-content  -->
+    </div><!-- end team  -->
+    <div id="contact">
+        <div id="contact-parallex">
+            <div class="contact-grid">
+                <div class="contact-form-details">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="contact-title text-left wow fadeIn">
+                                    <!-- <h3>liên hệ, giải pháp, đối tác, ngân hàng tác phẩm, tin tức</h3> -->
+                                    <h3>LIÊN HỆ</h3>
+                                    <div class="underline1"></div>
+                                    <div class="underline2"></div>
+                                    <p>New House 2018</p>
+                                </div><!-- end contact-title -->
+                            </div><!-- end col-md-12  -->
+                        </div><!-- end row  -->
+                        <div class="row about-row">
+                            <div class="col-md-8 col-sm-8 wow fadeIn">
+                                <div class="contact-form">
+                                    <form class="contact-form shake" action="/home/contact" method="post">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <input type="text" id="name" name="name" class="form-control" placeholder="Name" required data-error="Please enter your name">
+                                                @*<div class="help-block with-errors"></div>*@
+                                            </div><!-- end controls -->
+                                        </div><!-- end form-group -->
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <input type="email" class="email form-control" id="email" name="email" placeholder="Email" required data-error="Please enter your email">
+                                                @*<div class="help-block with-errors"></div>*@
+                                            </div><!-- end controls -->
+                                        </div><!-- end form-group -->
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <input type="text" id="msg_subject" class="form-control" name="subject" placeholder="Subject" required data-error="Please enter your message subject">
+                                                @*<div class="help-block with-errors"></div>*@
+                                            </div><!-- end controls -->
+                                        </div><!-- end form-group -->
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <textarea id="message" rows="7" placeholder="Massage" class="form-control" required data-error="Write your message" name="mess"></textarea>
+                                                @*<div class="help-block with-errors"></div>*@
+                                            </div><!-- end controls -->
+                                        </div><!-- end form-group -->
+                                        <button type="submit" id="submit" class="btn btn-success"> Gửi</button>
+                                        @*<div id="msgSubmit" class="h3 text-center hidden"></div>*@
+                                        <div class="clearfix"></div>
+                                    </form>
+                                </div><!-- end contact-form -->
+                            </div><!-- end col-md-8 -->
+                            <div class="col-md-4 col-sm-4">
+                                <div class="contact-col" data-wow-delay=".2s">
+                                    <i class="fa fa-map-marker contact-icon" aria-hidden="true"></i>
+                                    <h3>Địa chỉ : @Model.FirstOrDefault().ab.Address</h3>
+                                </div><!-- end contact-col  -->
+                                <div class="contact-col" data-wow-delay=".4s">
+                                    <i class="fa fa-envelope contact-icon" aria-hidden="true"></i>
+                                    <h3>Email : @Model.FirstOrDefault().ab.Email</h3>
+                                </div><!-- end contact-col  -->
+                                <div class="contact-col" data-wow-delay=".6s">
+                                    <i class="fa fa-mobile contact-icon" aria-hidden="true"></i>
+                                    <h3>Điện thoại : @Model.FirstOrDefault().ab.Phone</h3>
+                                </div><!-- end contact-col  -->
+                            </div><!-- end col-md-4 -->
+                        </div><!-- end row -->
+                    </div><!-- end container -->
+
+                </div><!-- end contact-form-details -->
+                <div class="copyright-details">
+                    <div class="copyright">
+                        <h3>copyright and design: Newhouse Building Solution</h3>
+                    </div><!-- end copyright -->
+                </div><!-- end copyright-details -->
+            </div><!-- end contact-grid -->
+        </div><!-- end contact-content -->
+    </div><!-- end contact -->
+
+}
+else
+{
+    <div id="home">
+        <div class="home-content">
+            <div class="home-content-main-slider">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                        <li data-target="#myCarousel" data-slide-to="4"></li>
+                        <li data-target="#myCarousel" data-slide-to="5"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active" style="background-image: url(../../Images/NewHouse/imageslider/@Model.FirstOrDefault().slider.Image01);">
+                            <div class="home-slider-1st">
+                                <div class="table-cell">
+                                    <div class="home-text">
+                                        <h1>@Model.FirstOrDefault().slider.Title01</h1>
+                                        <h2><b>@Model.FirstOrDefault().slider.SubTitle01</b></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item" style="background-image: url(../../Images/NewHouse/imageslider/@Model.FirstOrDefault().slider.Image02);">
+                            <div class="home-slider-0">
+                                <div class="table-cell">
+                                    <div class="home-text">
+                                        <h1>@Model.FirstOrDefault().slider.Title02</h1>
+                                        <h2><b>@Model.FirstOrDefault().slider.SubTitle02</b></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item" style="background-image: url(../../Images/NewHouse/imageslider/@Model.FirstOrDefault().slider.Image03);">
+                            <div class="home-slider-1">
+                                <div class="table-cell">
+                                    <div class="home-text">
+                                        <h1>@Model.FirstOrDefault().slider.Title03</h1>
+                                        <h2><b>@Model.FirstOrDefault().slider.SubTitle03</b></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item" style="background-image: url(../../Images/NewHouse/imageslider/@Model.FirstOrDefault().slider.Image04);">
+                            <div class="home-slider-2">
+                                <div class="table-cell">
+                                    <div class="home-text">
+                                        <h1>@Model.FirstOrDefault().slider.Title04</h1>
+                                        <h2><b>@Model.FirstOrDefault().slider.SubTitle04</b></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item" style="background-image: url(../../Images/NewHouse/imageslider/@Model.FirstOrDefault().slider.Image05);">
+                            <div class="home-slider-3">
+                                <div class="table-cell">
+                                    <div class="home-text">
+                                        <h1>@Model.FirstOrDefault().slider.Title05</h1>
+                                        <h2><b>@Model.FirstOrDefault().slider.SubTitle05</b></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item" style="background-image: url(../../Images/NewHouse/imageslider/@Model.FirstOrDefault().slider.Image06);">
+                            <div class="home-slider-4">
+                                <div class="table-cell">
+                                    <div class="home-text">
+                                        <h1>@Model.FirstOrDefault().slider.Title06</h1>
+                                        <h2><b>@Model.FirstOrDefault().slider.SubTitle06</b></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                    </a>
+                    <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                    </a>
+                </div>
+            </div><!-- end home-content-main -->
+        </div><!-- end home-parallex  -->
+    </div><!-- end home  -->
+    <!-- ============================================== TEAM ================= -->
+    <div id="team">
+        <div class="about-content1">
+            <div class="us-grid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="about-title text-left wow fadeIn">
+                                <h3>CÁC GIẢI PHÁP CÔNG NGHỆ CỦA NEW HOUSE</h3>
+                                <div class="underlinewhite1"></div>
+                                <div class="underlinewhite2"></div>
+                            </div><!-- end team-title  -->
+                        </div><!-- end col-md-12  -->
+                        <div class="col-md-5 col-sm-6 ">
+                            <div class="about-image-solution wow fadeIn">
+                                <img src="~/Content/NewHouse/img/Cell system.png" alt="" class="about-img">
+                            </div><!-- end about-image  -->
+                        </div><!-- end col-md-6  -->
+                        <div class="col-md-7 col-sm-6">
+                            <div class="about-details-solutions wow fadeIn">
+                                <h3 class="wow fadeIn">CẤU TRÚC SANDWICH</h3>
+                                <p class="wow fadeIn">
+                                    Thay thế kết cấu truyền thống bê tông cho sàn và tường dựa trên kết cấu khung bằng phương pháp kết hợp các lớp chịu lực, cấu tạo, xen kẽ tạo ra những tấm sàn tường chịu lực cao được áp dụng từ lâu trong thiết kế kết cấu hiện đại.<br>
+                                    Sự sáng tạo đặc biệt của New House System khi thay hệ keo tổng hợp tại nhà máy của tấm sandwich panel truyền thống bằng hệ nối smart lock, cho phép xấy dựng những tấm sàn - tường chịu lực vượt nhịp lớn lên đến 9m không cần khung có thể lắp đặt dễ dàng với 2 công nhân khỏe mạnh.<br>
+                                    Ngoài ra áp dụng công nghệ gfc composite cho pháp các lớp chịu lực thay thế cho gỗ và thép trong môi trường vùng biển giải quyết bài toán khó cho hệ sandwich truyền thống đang gặp phải không ứng dụng được.<br>
+                                    Multilayer structure solution developed and certified in 2016.
+                                </p>
+                            </div><!-- end about-details  -->
+                        </div><!-- end col-md-6  -->
+                        <div class="col-md-5 col-sm-6 ">
+                            <div class="about-image-solution wow fadeIn">
+                                <img src="~/Content/NewHouse/img/cell system 2.png" alt="" class="about-img">
+                            </div><!-- end about-image  -->
+                        </div><!-- end col-md-6  -->
+                        <div class="col-md-7 col-sm-6">
+                            <div class="about-details-solutions wow fadeIn">
+                                <h3 class="wow fadeIn">HỆ HOÀN THIỆN TẾ BÀO</h3>
+                                <p class="wow fadeIn">
+                                    Tất cả các hoàn thiện truyền thống thường được thực hiện tại công trường với nhiều rủi ro chất lượng gây ra sự tốn kém thời gian và không dùng lại được khi thay thế cho các hệ sàn và gạch.<br>
+                                    New house system phát triển triệt để các lớp hoàn thiện truyền thống gắn kết với lớp kết cấu qua hệ clips và modul era các tấm độc lập có khối lượng nhỏ hơn 10kg/cell cho phép công tác hoàn thiện chính xác như đo cắt và thay thế đễ dàng trong trường hợp hư hỏng và đổi mới.<br>
+                                    Hệ cell system của new house gần như ứng dụng cho tất cả các lớp hoàn thiện toàn diện như: đá gỗ, kim loại, một số hệ gạch, kính các loại. Thậm chí có cả green roof và green wall.<br>
+                                    Cho phép hoàn thiện trên bất kì bề mặt nào bằng cách chia nhỏ các bề mặt từ các hệ đơn nhịp đơn giản đến hệ paramatric phức tạp hơn.
+                                </p>
+                            </div><!-- end about-details  -->
+                        </div><!-- end col-md-6  -->
+                        <div class="col-md-5 col-sm-6 ">
+                            <div class="about-image-solution wow fadeIn">
+                                <img src="~/Content/NewHouse/img/cell system 3.png" alt="" class="about-img">
+                            </div><!-- end about-image  -->
+                        </div><!-- end col-md-6  -->
+                        <div class="col-md-7 col-sm-6">
+                            <div class="about-details-solutions wow fadeIn">
+                                <h3 class="wow fadeIn">CẤU TẠO ĐA LỚP</h3>
+                                <p class="wow fadeIn">
+                                    Một truyệt tác sáng tạo của new house là tác tất cả các lớp: kết cấu - cấu tạo - chống thấm - hoàn thiện ra nhiều lớp khác nhau hoạt động độc lập hoặc kết hợp chịu lực cho phép dễ dàng thay thế, dễ dàng lắp đặt và đến 100% được sản xuất sẵn tại nhà máy với chất lượng ổn định và kiểm soát.<br>
+                                    Multilayer method cho pháp xấy dựng bất kì 1 loại nhà nào theo thiết kế hiện đại hay cổ điểm tuy nhiên với thiết kế mới và tiêu chí mới, chúng tôi ưu tiên phát triển các thiết kế hiện đại với khuynh hướng tối giản tạo nên sự thanh lịch và ấn tượng.<br>
+                                    Cho phép các lớp cấu tạo hoàn toàn độc lập không kết dính bang keo, tạo sự thay thế bảo trì dễ dàng.
+                                </p>
+                            </div><!-- end about-details  -->
+                        </div><!-- end col-md-6  -->
+
+                        <div class="col-md-7 col-sm-6">
+                            <div class="about-details-right wow fadeIn">
+                                <h3 class="wow fadeIn">CÔNG NGHỆ XỬ LÝ GỖ</h3>
+                                <div class="underline1 white"></div>
+                                <div class="underline2 white"></div>
+                                <div class="underline about-underline"></div>
+                                <p class="wow fadeIn"></p>
+                                <h4 class="wow fadeIn">XỬ LÍ</h4>
+                                <div class="underlinewhite1"></div>
+                                <div class="underlinewhite2"></div>
+                                <p class="wow fadeIn">Xử lý gỗ bằng công nghệ OIL PRESSURE TREATMENT: phát triển và xử lý bởi công ty<b>TIMBALINK</b>, với các mức độ chất lượng từ <b>H1 đến H4</b> được bảo đảm trong môi trường ngoài trời với mức bảo hành lên đến 25 năm</p>
+                                <p class="wow fadeIn">Công nghệ <b>THERMOS TREATMENT</b>, đảm bảo chất lượng gỗ bằng phương pháp xử lý nhiệt được cung ứng và phát triển tại Việt Nam bởi công ty <b>VINAPLACE</b>.</p>
+                                <h4 class="wow fadeIn">CẤU TRÚC MỚI</h4>
+                                <div class="underlinewhite1"></div>
+                                <div class="underlinewhite2"></div>
+                                <p class="wow fadeIn">hệ dầm gỗ vượt nhip cao. <b>GLULAM BEAM</b>, <b>Hệ sàn gỗ CLT</b>, <b>Hệ GRIDCELL DOME</b> được cung cấp bởi công ty <b>NEWZEALAND HOUSE</b>.</p>
+                                <p class="wow fadeIn">Hệ Parametric được hợp tác với <b>ABTRACTOR</b>.</p>
+                            </div><!-- end about-details  -->
+                        </div><!-- end col-md-6  -->
+                        <div class="col-md-5 col-sm-6 ">
+                            <div class="about-image wow fadeIn">
+                                <img src="~/Content/NewHouse/img/woodstruc.png" alt="" class="about-img">
+                            </div><!-- end about-image  -->
+                        </div><!-- end col-md-6  -->
+
+                        <div class="col-md-4 col-sm-6 ">
+                            <div class="about-image wow fadeIn">
+                                <img src="~/Content/NewHouse/img/1material.jpg" alt="" class="about-img">
+                            </div><!-- end about-image  -->
+                            <div class="about-image wow fadeIn">
+                                <img src="~/Content/NewHouse/img/2material.png" alt="" class="about-img">
+                            </div><!-- end about-image  -->
+                        </div><!-- end col-md-6  -->
+                        <div class="col-md-8 col-sm-6">
+                            <div class="about-details wow fadeIn">
+                                <h3 class="wow fadeIn">NGUYÊN LIỆU</h3>
+                                <div class="underline1 white"></div>
+                                <div class="underline2 white"></div>
+                                <div class="underline about-underline"></div>
+                                <p class="wow fadeIn">CẤU KIỆN GFRC SẢN XUẤT TẠI NHẬT VÀ VIỆT NAM</p>
+                            </div><!-- end about-details  -->
+                        </div><!-- end col-md-6  -->
+
+                        <div class="col-md-12 col-sm-6 ">
+                            <div class="about-details-center wow fadeIn">
+                                <p class="wow fadeIn">ESSENTIAL TO LAYOUT<br>TRỌNG LƯỢNG NHẸ ĐỂ DỰNG LÊN<br>90% ĐƯỢC LÀM TẠI XƯỞNG<br>4 NGƯỜI CÓ THỂ XÂY DỰNG TRONG 3 NGÀY<br>TÁI SỬ DỤNG 100%</p>
+                            </div><!-- end about-details  -->
+                        </div><!-- end col-md-6  -->
+                    </div><!-- end row  -->
+                </div><!-- end container  -->
+            </div><!-- end me-grid  -->
+        </div>
+        <div class="team-content">
+            <div class="team-grid text-left">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="team-title text-left wow fadeIn">
+                                <h3>@Model.FirstOrDefault().hp.Title01</h3>
+                                <div class="underline1"></div>
+                                <div class="underline2"></div>
+                                @Html.Raw(Model.FirstOrDefault().hp.Description)
+                            </div><!-- end team-title  -->
+                        </div><!-- end col-md-12  -->
+                    </div><!-- end row  -->
+                    <div class="row team-row text-left">
+                        <div class="col-md-3 col-sm-6 team-col">
+                            <div class="corporate-team">
+                                <div class="team-member wow fadeIn" data-wow-delay=".2s">
+                                    <div class="overlay text-left">
+                                        <div class="overlay-main">
+                                            <div class="table-cell">
+                                                <a href="log.html">
+                                                    <h3>@Model.FirstOrDefault().hp.SubTitle01</h3>
+                                                    <p>@Model.FirstOrDefault().hp.Description01</p>
+                                                </a>
+                                                <div class="team-icon-grid">
+                                                    <div class="team-icon text-left">
+                                                        <ul class="team-social">
+                                                            <li><a href="www.facebook.com" target="newtab"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.twitter.com" target="newtab"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.pinterest.com" target="newtab"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.instagram.com" target="newtab"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                                        </ul>
+                                                    </div><!-- end team-icon  -->
+                                                </div><!-- end team-icon-grid  -->
+                                            </div><!-- end table-cell  -->
+                                        </div><!-- end overlay-main  -->
+                                    </div><!-- end overlay  -->
+                                    <img src="~/Images/NewHouse/imagehomepage/@Model.FirstOrDefault().hp.Image01" alt="" class="team-img-testing">
+                                </div><!-- end team-member  -->
+                                <div class="team-details">
+                                    <a href="log.html"><h3>@Model.FirstOrDefault().hp.SubTitle01</h3></a>
+                                </div><!-- end team-details  -->
+                            </div><!-- end corporate-team  -->
+                        </div><!-- end col-md-3  -->
+                        <div class="col-md-3 col-sm-6 team-col">
+                            <div class="corporate-team">
+                                <div class="team-member wow fadeIn" data-wow-delay=".2s">
+                                    <div class="overlay text-left">
+                                        <div class="overlay-main">
+                                            <div class="table-cell">
+                                                <a href="slab.html">
+                                                    <h3>@Model.FirstOrDefault().hp.SubTitle02</h3>
+                                                    <p>@Model.FirstOrDefault().hp.Description02</p>
+                                                </a>
+                                                <div class="team-icon-grid">
+                                                    <div class="team-icon text-left">
+                                                        <ul class="team-social">
+                                                            <li><a href="www.facebook.com" target="newtab"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.twitter.com" target="newtab"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.pinterest.com" target="newtab"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.instagram.com" target="newtab"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                                        </ul>
+                                                    </div><!-- end team-icon  -->
+                                                </div><!-- end team-icon-grid  -->
+                                            </div><!-- end table-cell  -->
+                                        </div><!-- end overlay-main  -->
+                                    </div><!-- end overlay  -->
+                                    <img src="~/Images/NewHouse/imagehomepage/@Model.FirstOrDefault().hp.Image02" alt="" class="team-img-testing">
+                                </div><!-- end team-member  -->
+                                <div class="team-details">
+                                    <a href="slab.html"><h3>@Model.FirstOrDefault().hp.SubTitle02</h3></a>
+                                </div><!-- end team-details  -->
+                            </div><!-- end corporate-team  -->
+                        </div><!-- end col-md-3  -->
+                        <div class="col-md-3 col-sm-6 team-col">
+                            <div class="corporate-team">
+                                <div class="team-member wow fadeIn" data-wow-delay=".2s">
+                                    <div class="overlay text-left">
+                                        <div class="overlay-main">
+                                            <div class="table-cell">
+                                                <a href="kolumn.html">
+                                                    <h3>@Model.FirstOrDefault().hp.SubTitle03</h3>
+                                                    <p>@Model.FirstOrDefault().hp.Description03</p>
+                                                </a>
+                                                <div class="team-icon-grid">
+                                                    <div class="team-icon text-left">
+                                                        <ul class="team-social">
+                                                            <li><a href="www.facebook.com" target="newtab"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.twitter.com" target="newtab"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.pinterest.com" target="newtab"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.instagram.com" target="newtab"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                                        </ul>
+                                                    </div><!-- end team-icon  -->
+                                                </div><!-- end team-icon-grid  -->
+                                            </div><!-- end table-cell  -->
+                                        </div><!-- end overlay-main  -->
+                                    </div><!-- end overlay  -->
+                                    <img src="~/Images/NewHouse/imagehomepage/@Model.FirstOrDefault().hp.Image03" alt="" class="team-img-testing">
+                                </div><!-- end team-member  -->
+                                <div class="team-details">
+                                    <a href="kolumn.html"><h3>@Model.FirstOrDefault().hp.SubTitle03</h3></a>
+                                </div><!-- end team-details  -->
+                            </div><!-- end corporate-team  -->
+                        </div><!-- end col-md-3  -->
+                        <div class="col-md-3 col-sm-6 team-col">
+                            <div class="corporate-team">
+                                <div class="team-member wow fadeIn" data-wow-delay=".2s">
+                                    <div class="overlay text-left">
+                                        <div class="overlay-main">
+                                            <div class="table-cell">
+                                                <a href="dome.html">
+                                                    <h3>@Model.FirstOrDefault().hp.SubTitle04</h3>
+                                                    <p>@Model.FirstOrDefault().hp.Description04</p>
+                                                </a>
+                                                <div class="team-icon-grid">
+                                                    <div class="team-icon text-left">
+                                                        <ul class="team-social">
+                                                            <li><a href="www.facebook.com" target="newtab"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.twitter.com" target="newtab"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.pinterest.com" target="newtab"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                                            <li><a href="www.instagram.com" target="newtab"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                                        </ul>
+                                                    </div><!-- end team-icon  -->
+                                                </div><!-- end team-icon-grid  -->
+                                            </div><!-- end table-cell  -->
+                                        </div><!-- end overlay-main  -->
+                                    </div><!-- end overlay  -->
+                                    <img src="~/Images/NewHouse/imagehomepage/@Model.FirstOrDefault().hp.Image04" alt="" class="team-img-testing">
+                                </div><!-- end team-member  -->
+                                <div class="team-details">
+                                    <a href="dome.html"><h3>@Model.FirstOrDefault().hp.SubTitle04</h3></a>
+                                </div><!-- end team-details  -->
+                            </div><!-- end corporate-team  -->
+                        </div><!-- end col-md-3  -->
+                    </div><!-- end row  -->
+                </div><!-- end container  -->
+            </div><!-- end row-grid  -->
+        </div><!-- end team-content  -->
+    </div><!-- end team  -->
+    <!-- ============================================== FEATURES ===================================================== -->
+
+    <div id="features">
+        <div class="features-content">
+            <div class="features-grid text-left">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="features-title text-left wow fadeIn" data-wow-delay=".2s">
+                                <h3>@Model.FirstOrDefault().fea.Title</h3>
+                                <p>@Model.FirstOrDefault().fea.Description</p>
+                                <br>
+                            </div><!-- end service-title  -->
+                        </div><!-- end col-md-12  -->
+                    </div><!-- end row  -->
+                    <div class="row features-row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="features-details wow fadeIn" data-wow-delay=".4s">
+                                <i class="fa fa-magic features-icon" aria-hidden="true"></i>
+                                <h3>@Model.FirstOrDefault().fea.Title01</h3>
+                                <p>@Model.FirstOrDefault().fea.Description01</p><br>
+                            </div><!-- end service-details  -->
+                        </div><!-- end col-md-4  -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="features-details wow fadeIn" data-wow-delay=".6s">
+                                <i class="fa fa-thumbs-up features-icon" aria-hidden="true"></i>
+                                <h3>@Model.FirstOrDefault().fea.Title02</h3>
+                                <p>@Model.FirstOrDefault().fea.Description02</p>
+                            </div><!-- end service-details  -->
+                        </div><!-- end col-md-4  -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="features-details wow fadeIn" data-wow-delay=".2s">
+                                <i class="fa fa-money features-icon" aria-hidden="true"></i>
+                                <h3>@Model.FirstOrDefault().fea.Title03</h3>
+                                <p>@Model.FirstOrDefault().fea.Description03</p>
+                            </div><!-- end service-details  -->
+                        </div><!-- end col-md-4  -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="features-details wow fadeIn">
+                                <i class="fa fa-pencil-square features-icon" aria-hidden="true"></i>
+                                <h3>@Model.FirstOrDefault().fea.Title04</h3>
+                                <p>@Model.FirstOrDefault().fea.Description04</p>
+                            </div><!-- end service-details  -->
+                        </div><!-- end col-md-4  -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="features-details wow fadeIn" data-wow-delay=".4s">
+                                <i class="fa fa-diamond features-icon" aria-hidden="true"></i>
+                                <h3>@Model.FirstOrDefault().fea.Title05</h3>
+                                <p>@Model.FirstOrDefault().fea.Description05</p>
+                            </div><!-- end service-details  -->
+                        </div><!-- end col-md-4  -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="features-details wow fadeIn" data-wow-delay=".6s">
+                                <i class="fa fa-cogs features-icon" aria-hidden="true"></i>
+                                <h3>@Model.FirstOrDefault().fea.Title06</h3>
+                                <p>@Model.FirstOrDefault().fea.Description06</p>
+                            </div><!-- end service-details  -->
+                        </div><!-- end col-md-4  -->
+                    </div><!-- end row  -->
+                </div><!-- end container  -->
+            </div><!-- end service-grid  -->
+        </div><!-- end service-content  -->
+    </div><!-- end service  -->
+    <!-- ================================ ABOUT =============================== -->
+    <div id="project">
+        <div class="team-content1">
+            <div class="team-grid text-left">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="team-title text-left wow fadeIn">
+                                <h3>PROJECT</h3>
+                                <div class="underline1"></div>
+                                <div class="underline2"></div>
+                            </div><!-- end team-title  -->
+                        </div><!-- end col-md-12  -->
+                    </div><!-- end row  -->
+                    <div class="row team-row text-left">
+                        @foreach (var item in Model.FirstOrDefault().pro)
+                        {
+                            <div class="col-md-3 col-sm-6 team-col">
+                                <div class="corporate-team-project">
+                                    <div class="team-member-project wow fadeIn" data-wow-delay=".2s">
+                                        <div class="overlay text-left">
+                                            <div class="overlay-main">
+                                                <div class="table-cell">
+                                                    <a href="/project/detail/@item.ID">
+                                                        <h3>@item.ProjectName</h3>
+                                                        <p></p>
+                                                    </a>
+                                                </div><!-- end table-cell  -->
+                                            </div><!-- end overlay-main  -->
+                                        </div><!-- end overlay  -->
+                                        <img src="~/Images/NewHouse/imageproject/@item.Avatar" alt="" class="team-img-project">
+                                    </div><!-- end team-member  -->
+                                    <div class="team-details">
+                                        <a href="/project/detail/@item.ID"><h3>@item.ProjectName</h3></a>
+                                    </div><!-- end team-details  -->
+                                </div><!-- end corporate-team  -->
+                            </div><!-- end col-md-3  -->
+                        }
+
+
+                    </div><!-- end row  -->
+
+
+                </div><!-- end container  -->
+            </div><!-- end row-grid  -->
+        </div><!-- end team-content  -->
+    </div>
+    <div class="work-counter text-left" id="counter">
+        <div class="counter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-6 wow fadeIn">
+                        <div class="work-statistics">
+                            <i class="fa fa-pencil-square-o stat-icon" aria-hidden="true"></i>
+                            <h3 class="Count">510</h3>
+                            <div class="underline1"></div>
+                            <div class="underline2"></div>
+                            <p>Orders</p>
+                        </div><!-- end work-statistics  -->
+                    </div><!-- end col-md-3  -->
+                    <div class="col-md-3 col-sm-6 col-xs-6 wow fadeIn">
+                        <div class="work-statistics">
+                            <i class="fa fa-star stat-icon" aria-hidden="true"></i>
+                            <h3 class="Count">1285</h3>
+                            <div class="underline1"></div>
+                            <div class="underline2"></div>
+                            <p>Ratings</p>
+                        </div><!-- end work-statistics  -->
+                    </div><!-- end col-md-3  -->
+                    <div class="col-md-3 col-sm-6 col-xs-6 wow fadeIn">
+                        <div class="work-statistics">
+                            <i class="fa fa-eye stat-icon" aria-hidden="true"></i>
+                            <h3 class="Count">3392</h3>
+                            <div class="underline1"></div>
+                            <div class="underline2"></div>
+                            <p>Reviews</p>
+                        </div><!-- end work-statistics  -->
+                    </div><!-- end col-md-3  -->
+                    <div class="col-md-3 col-sm-6 col-xs-6 wow fadeIn">
+                        <div class="work-statistics">
+                            <i class="fa fa-trophy stat-icon" aria-hidden="true"></i>
+                            <h3 class="Count">3</h3>
+                            <div class="underline1"></div>
+                            <div class="underline2"></div>
+                            <p>Awards</p>
+                        </div><!-- end work-statistics  -->
+                    </div><!-- end col-md-3  -->
+                </div><!-- end row  -->
+            </div><!-- end container-fluid  -->
+        </div><!-- end counter  -->
+    </div><!-- end work-counter  -->
+    <div id="testimonial">
+        <div class="testimonial-content">
+            <div class="testimonial-grid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="testimonial-title text-left wow fadeIn">
+                                <h3>NEWS</h3>
+                                <div class="underline1 white"></div>
+                                <div class="underline2 white bottom"></div>
+                            </div><!-- end testimonial-title  -->
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-details wow fadeIn text-left">
+                    <section id="carousel">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
+                                        <ol class="carousel-indicators carousel-indicators1">
+                                            @foreach (var item in Model.FirstOrDefault().news)
+                                            {
+                                                if (j == 0)
+                                                {
+                                                    <li data-target="#fade-quote-carousel" data-slide-to="@j" class="active"></li>
+                                                }
+                                                else
+                                                {
+                                                    <li data-target="#fade-quote-carousel" data-slide-to="@j"></li>
+                                                }
+                                                j++;
+                                            }
+                                        </ol>
+                                        <div class="carousel-inner">
+                                            @foreach (var item in Model.FirstOrDefault().news)
+                                            {
+                                                if (i == 0)
+                                                {
+                                                    <div class="active item">
+                                                        <blockquote>
+                                                            @Html.Raw(item.Description)
+                                                            <br />
+                                                            <p>@item.Title</p>
+                                                            <div class="star-icon-grid text-left">
+                                                                <i class="fa fa-star-o special-item-icon" aria-hidden="true"></i>
+                                                                <i class="fa fa-star-o special-item-icon" aria-hidden="true"></i>
+                                                                <i class="fa fa-star-o special-item-icon" aria-hidden="true"></i>
+                                                                <i class="fa fa-star-o special-item-icon" aria-hidden="true"></i>
+                                                                <i class="fa fa-star-o special-item-icon" aria-hidden="true"></i>
+                                                            </div><!-- end star-icon-grid -->
+                                                        </blockquote>
+                                                    </div><!-- end item  -->
+                                                }
+                                                else
+                                                {
+                                                    <div class="item">
+                                                        <blockquote>
+                                                            @Html.Raw(item.Description)
+                                                            <br />
+                                                            <p>@item.Title</p>
+                                                            <div class="star-icon-grid text-left">
+                                                                <i class="fa fa-star-o special-item-icon" aria-hidden="true"></i>
+                                                                <i class="fa fa-star-o special-item-icon" aria-hidden="true"></i>
+                                                                <i class="fa fa-star-o special-item-icon" aria-hidden="true"></i>
+                                                                <i class="fa fa-star-o special-item-icon" aria-hidden="true"></i>
+                                                                <i class="fa fa-star-o special-item-icon" aria-hidden="true"></i>
+                                                            </div><!-- end star-icon-grid -->
+                                                        </blockquote>
+                                                    </div><!-- end item  -->
+                                                }
+                                                i++;
+                                            }
+
+
+                                        </div><!-- end carousel-inner  -->
+                                    </div><!-- end carousel-slide  -->
+                                </div><!-- end col-md-8  -->
+                            </div><!-- end row  -->
+                        </div><!-- end container  -->
+                    </section>
+                </div><!-- end testimonials-details  -->
+            </div><!-- end testimonial-grid  -->
+        </div><!-- end testimonial-content  -->
+    </div><!-- end testimonial  -->
+    <!-- ================================ CONTACT =============================== -->
+    <div id="architect">
+        <div class="team-content">
+            <div class="team-grid text-left">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="team-title text-left wow fadeIn">
+                                <h3>@Model.FirstOrDefault().pns.Title</h3>
+                                <!-- <h3>ARCHITECTS - ART WORKS</h3> -->
+                                <div class="underline1"></div>
+                                <div class="underline2"></div>
+
+                                @Html.Raw(Model.FirstOrDefault().pns.Description)
+
+                                <!-- <p><b>NEWHOUSE</b> offers a complete solution for the development and construction of any home designed by the architect.<br><b>WE MAKE YOUR IDEAS COME TRUE.
+                                The masterpiece has no owner<br>
+                                The program finds the master for the masterpiece<br>
+                                AN ARCHITECTURAL WORK CAN NOT BE ASSESSED BEAUTIFUL OR FAST<br>
+                                HAVE BEEN RECEIVED ARCHITECTS THAT NEED TO FIND IT FOR OUR MASTER<br>
+                                COMPLETE CREATIVE, SEARCHING FOR PERSON<br>
+                                ERROR: WORKING TO PUBLIC<br>
+                                Determine your brilliance<br>
+                                REDEMPTION SOCIETY<br>
+                                CONSCIOUS COMMENTS.<br>
+                                SAVE FOR INVESTORS - SAVINGS TO SOCIETY</b>
+                                </p>     -->
+                            </div><!-- end team-title  -->
+                        </div><!-- end col-md-12  -->
+                    </div><!-- end row  -->
+                    <div class="row team-row text-left">
+                        @foreach (var item in Model.FirstOrDefault().ar)
+                        {
+                            <div class="col-md-4 col-sm-6 team-col">
+                                <div class="corporate-team2">
+                                    <div class="team-member2 wow fadeIn" data-wow-delay=".2s">
+                                        <div class="overlay text-left">
+                                            <div class="overlay-main">
+                                                <div class="table-cell">
+                                                    <a href="/architect/index/@item.ID">
+                                                        <h3>@item.Name</h3>
+                                                        <p></p>
+                                                    </a>
+                                                    <div class="team-icon-grid">
+                                                        <div class="team-icon text-left">
+                                                            <ul class="team-social">
+                                                                <li><a href="www.facebook.com" target="newtab"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                                <li><a href="www.twitter.com" target="newtab"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                                <li><a href="www.pinterest.com" target="newtab"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                                                <li><a href="www.instagram.com" target="newtab"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                                            </ul>
+                                                        </div><!-- end team-icon  -->
+                                                    </div><!-- end team-icon-grid  -->
+                                                </div><!-- end table-cell  -->
+                                            </div><!-- end overlay-main  -->
+                                        </div><!-- end overlay  -->
+                                        <img src="~/Images/NewHouse/imagearchitec/@item.Avatar" alt="" class="team-img-architect">
+                                    </div><!-- end team-member  -->
+                                    <div class="team-details">
+                                        <a href="/architect/index/@item.ID"><h3>@item.Name</h3></a>
+                                    </div><!-- end team-details  -->
+                                </div><!-- end corporate-team  -->
+                            </div><!-- end col-md-3  -->
+                        }
+                    </div><!-- end row  -->
+                </div><!-- end container  -->
+            </div><!-- end row-grid  -->
+        </div><!-- end team-content  -->
+    </div><!-- end team  -->
+    <div id="architect">
+        <div class="team-content">
+            <div class="team-grid text-left">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="team-title text-left wow fadeIn">
+                                <h3>PARTNERS</h3>
+                                <div class="underline1"></div>
+                                <div class="underline2"></div>
+                                <p>
+                                </p>
+                            </div><!-- end team-title  -->
+                        </div><!-- end col-md-12  -->
+                    </div><!-- end row  -->
+                    <div class="row team-row text-left">
+                        @foreach (var item in Model.FirstOrDefault().pn)
+                        {
+                            <div class="col-md-3 col-sm-6 team-col">
+                                <div class="corporate-team-partner">
+                                    <div class="team-member-partner wow fadeIn" data-wow-delay=".2s">
+                                        <div class="overlay text-left">
+                                            <div class="overlay-main">
+                                                <div class="table-cell">
+                                                    <a href="@item.Link">
+                                                        <h3>@item.Name</h3>
+                                                        <p></p>
+                                                    </a>
+                                                    <div class="team-icon-grid">
+                                                        <div class="team-icon text-left">
+                                                            <ul class="team-social">
+                                                                <li><a href="www.facebook.com" target="newtab"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                                <li><a href="www.twitter.com" target="newtab"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                                <li><a href="www.pinterest.com" target="newtab"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                                                <li><a href="www.instagram.com" target="newtab"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                                            </ul>
+                                                        </div><!-- end team-icon  -->
+                                                    </div><!-- end team-icon-grid  -->
+                                                </div><!-- end table-cell  -->
+                                            </div><!-- end overlay-main  -->
+                                        </div><!-- end overlay  -->
+                                        <img src="~/Images/NewHouse/imagepartner/@item.Avatar" alt="" class="team-img-partner">
+                                    </div><!-- end team-member  -->
+                                    <div class="team-details">
+                                        <a href="@item.Link"><h3>@item.Name</h3></a>
+                                    </div><!-- end team-details  -->
+                                </div><!-- end corporate-team  -->
+                            </div><!-- end col-md-3  -->
+                        }
+
+                    </div><!-- end row  -->
+
+                </div><!-- end container  -->
+            </div><!-- end row-grid  -->
+        </div><!-- end team-content  -->
+    </div><!-- end team  -->
+    <div id="contact">
+        <div id="contact-parallex">
+            <div class="contact-grid">
+                <div class="contact-form-details">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="contact-title text-left wow fadeIn">
+                                    <!-- <h3>liên hệ, giải pháp, đối tác, ngân hàng tác phẩm, tin tức</h3> -->
+                                    <h3>CONTACT</h3>
+                                    <div class="underline1"></div>
+                                    <div class="underline2"></div>
+                                    <p>New House 2018</p>
+                                </div><!-- end contact-title -->
+                            </div><!-- end col-md-12  -->
+                        </div><!-- end row  -->
+                        <div class="row about-row">
+                            <div class="col-md-8 col-sm-8 wow fadeIn">
+                                <div class="contact-form">
+                                    <form class="contact-form shake" action="/home/contact" method="post">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <input type="text" id="name" name="name" class="form-control" placeholder="Name" required data-error="Please enter your name">
+                                                @*<div class="help-block with-errors"></div>*@
+                                            </div><!-- end controls -->
+                                        </div><!-- end form-group -->
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <input type="email" class="email form-control" id="email" name="email" placeholder="Email" required data-error="Please enter your email">
+                                                @*<div class="help-block with-errors"></div>*@
+                                            </div><!-- end controls -->
+                                        </div><!-- end form-group -->
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <input type="text" id="msg_subject" class="form-control" name="subject" placeholder="Subject" required data-error="Please enter your message subject">
+                                                @*<div class="help-block with-errors"></div>*@
+                                            </div><!-- end controls -->
+                                        </div><!-- end form-group -->
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <textarea id="message" rows="7" placeholder="Massage" class="form-control" required data-error="Write your message" name="mess"></textarea>
+                                                @*<div class="help-block with-errors"></div>*@
+                                            </div><!-- end controls -->
+                                        </div><!-- end form-group -->
+                                        <button type="submit" id="submit" class="btn btn-success"> Send</button>
+                                        @*<div id="msgSubmit" class="h3 text-center hidden"></div>*@
+                                        <div class="clearfix"></div>
+                                    </form>
+                                </div><!-- end contact-form -->
+                            </div><!-- end col-md-8 -->
+                            <div class="col-md-4 col-sm-4">
+                                <div class="contact-col" data-wow-delay=".2s">
+                                    <i class="fa fa-map-marker contact-icon" aria-hidden="true"></i>
+                                    <h3>Địa chỉ : @Model.FirstOrDefault().ab.Address</h3>
+                                </div><!-- end contact-col  -->
+                                <div class="contact-col" data-wow-delay=".4s">
+                                    <i class="fa fa-envelope contact-icon" aria-hidden="true"></i>
+                                    <h3>Email : @Model.FirstOrDefault().ab.Email</h3>
+                                </div><!-- end contact-col  -->
+                                <div class="contact-col" data-wow-delay=".6s">
+                                    <i class="fa fa-mobile contact-icon" aria-hidden="true"></i>
+                                    <h3>Điện thoại : @Model.FirstOrDefault().ab.Phone</h3>
+                                </div><!-- end contact-col  -->
+                            </div><!-- end col-md-4 -->
+                        </div><!-- end row -->
+                    </div><!-- end container -->
+
+                </div><!-- end contact-form-details -->
+                <div class="copyright-details">
+                    <div class="copyright">
+                        <h3>copyright and design: Newhouse Building Solution</h3>
+                    </div><!-- end copyright -->
+                </div><!-- end copyright-details -->
+            </div><!-- end contact-grid -->
+        </div><!-- end contact-content -->
+    </div><!-- end contact -->
+
+}

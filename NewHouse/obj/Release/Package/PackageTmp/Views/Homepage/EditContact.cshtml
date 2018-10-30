@@ -1,0 +1,120 @@
+﻿@model IEnumerable<NewHouse.Models.NH_AboutUs>
+@{
+    ViewBag.Title = "EditContact";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+<div class="main-wrapper">
+    <div class="container">
+
+        <!-- Start breadcrumb section  -->
+        <div class="row">
+            <div class="col-lg-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/webmaster/index">Trang chủ</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Quản lí phần liên hệ</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div class="col-lg-12" id="choose">
+            <div class="row">
+                <h5 class="mb col-lg-2" style="color:white">Ngôn ngữ: </h5>
+                <select class="form-control col-lg-3" id="opt" name="opt" style="width:15%; margin-left:-35px">
+                    <option value="vn" selected>Tiếng Việt</option>
+                    <option value="en">Tiếng Anh</option>
+                </select>
+            </div>
+        </div>
+        <br />
+
+        <!-- Start form -->
+        <div class="form-area">
+            <div class="row">
+
+                <div class="col-lg-12" id="vn">
+                    <div class="single-form">
+                        <div class="section-head">
+                            <div class="title">
+                                <h4>Chỉnh sửa Liên hệ</h4>
+                            </div>
+                        </div>
+
+                        <div class="section-body">
+                            <form action="/homepage/editcontact" method="post" enctype="multipart/form-data">
+                                @foreach (var item in Model)
+                                {
+                                    if (item.ID == 1)
+                                    {
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput4">Địa chỉ</label>
+                                            <input name="address" maxlength="100" class="form-control" value="@item.Address" />
+                                            <input name="lang" type="hidden" value="vn" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput4">Email</label>
+                                            <input name="email" maxlength="100" class="form-control" value="@item.Email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput4">Số điện thoại</label>
+                                            <input name="phone" maxlength="100" class="form-control" value="@item.Phone" />
+                                        </div>
+                                        <input class="btn btn-primaryt" type="submit" value="Lưu" />
+                                    }
+                                }
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-12" id="en" style="display:none">
+                    <div class="single-form">
+                        <div class="section-head">
+                            <div class="title">
+                                <h4>Chỉnh sửa Liên hệ</h4>
+                            </div>
+                        </div>
+
+                        <div class="section-body">
+                            <form action="/homepage/editcontact" method="post" enctype="multipart/form-data">
+                                @foreach (var item in Model)
+                                {
+                                    if (item.ID == 2)
+                                    {
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput4">Địa chỉ</label>
+                                            <input name="address" maxlength="100" class="form-control" value="@item.Address" />
+                                            <input name="lang" type="hidden" value="en" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput4">Email</label>
+                                            <input name="email" maxlength="100" class="form-control" value="@item.Email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput4">Số điện thoại</label>
+                                            <input name="phone" maxlength="100" class="form-control" value="@item.Phone" />
+                                        </div>
+                                        <input class="btn btn-primaryt" type="submit" value="Lưu" />
+                                    }
+                                }
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+      $("#opt").on("change", function () {
+        $("#" + $(this).val()).show().siblings().hide();
+        $("#head").show();
+        $("#choose").show();
+    })
+</script>

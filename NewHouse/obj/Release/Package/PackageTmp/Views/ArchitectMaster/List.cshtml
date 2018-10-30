@@ -1,0 +1,92 @@
+﻿@using PagedList.Mvc;
+@using GridMvc.Html;
+@model PagedList.IPagedList<NewHouse.Models.NH_Architec>
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+<div class="main-wrapper">
+    <div class="container">
+
+        <!-- Start breadcrumb section  -->
+        <div class="row">
+            <div class="col-lg-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/webmaster/index">Trang chủ</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Quản lí Kiến trúc sư</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Start table basic -->
+        <div class="basic-table">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="single-table">
+                        <div class="section-head">
+                            <div class="title">
+                                <h4>Danh sách Kiến trúc sư</h4>
+                            </div>
+                            <div class="align-self-center">
+                                <a class="btn btn-success" style="position:absolute;top:15px;right:37px" href="/architectmaster/add">Thêm</a>-
+                            </div>
+                        </div>
+                        <div class="section-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover progress-table text-white text-center" border="0" style="border-width:0px;border-style:None;border-collapse:collapse;">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Tên Kiến trúc sư</th>
+                                            <th>Hình đại diện</th>
+                                            <th>Miêu tả</th>
+                                            <th>Xoá</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                        <tr>
+                                            <td>@item.ID</td>
+                                            <td><a href="/architectmaster/edit/@item.ID">@item.Name</a></td>
+                                            <td>@item.Avatar</td>
+                                            @if (item.Description != null)
+                                            {
+                                                if (item.Description.Count() > 25)
+                                                {
+                                                    <td>@Html.Raw(item.Description.Substring(0, 25)) ...</td>
+                                                }
+                                                else
+                                                {
+                                                    <td>@Html.Raw(item.Description)</td>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <td></td>
+                                            }
+                                            <td><a href="/architectmaster/delete/@item.ID"><img src="~/Images/webmaster/icon/if_f-cross_256_282471.png" /></a></td>
+                                        </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                                <div class="pagination-total-pages">
+                                    <div class="pagination-style">
+                                        <strong style="margin: 12px;color:#ffffff"> Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount</strong>
+                                        @Html.PagedListPager(Model, page => Url.Action("List", new { page }))
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

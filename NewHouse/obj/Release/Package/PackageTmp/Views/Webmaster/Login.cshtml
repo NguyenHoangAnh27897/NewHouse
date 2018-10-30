@@ -1,0 +1,81 @@
+﻿@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Content/Webmaster/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/Content/Webmaster/css/font-awesome.min.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="~/Content/Webmaster/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/Webmaster/css/owl.theme.default.min.css">
+    <!-- scrollbar -->
+    <link rel="stylesheet" href="~/Content/Webmaster/css/scrollbar.css">
+    <!-- metismenu -->
+    <link rel="stylesheet" href="~/Content/Webmaster/css/metisMenu.css">
+    <!-- Site Style -->
+    <link rel="stylesheet" href="~/Content/Webmaster/style.css">
+    <link rel="stylesheet" href="~/Content/Webmaster/css/responsive.css">
+    <!-- Modernizr Js -->
+    <script src="~/Content/Webmaster/vendors/modernizr-js/modernizr.js"></script>
+</head>
+
+<body class="pl-0">
+
+
+    <!--================== Start login page ==================-->
+
+    <div class="login-page d-flex align-items-center">
+        <div class="login-area">
+            <div class="login-title text-center">
+                <a href="#" class="logo">
+                    @*<img src="~/Content/Webmaster/images/logo.png" alt="" class="img-fluid">*@
+                </a>
+                <h6>ĐĂNG NHẬP TÀI KHOẢN</h6>
+            </div>
+            <form action="/webmaster/login" method="post">
+                <div class="form-group">
+                    <label>Tên đăng nhập</label>
+                    <input type="text" class="form-control" placeholder="Nhập tên đăng nhập" name="Username">
+                </div>
+                <div class="form-group">
+                    <label>Mật khẩu</label>
+                    <input type="password" class="form-control" placeholder="Nhập mật khẩu" name="Password">
+                </div>
+                <div class="form-group col-12">
+                    <button class="btn btn-primary btn-block login-submit">Đăng nhập</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+
+    <!--================== End login page ==================-->
+    <!--================= Jquery plugins =================-->
+    <script src="~/Content/Webmaster/js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/Content/Webmaster/js/bootstrap.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="~/Content/Webmaster/js/owl.carousel.min.js"></script>
+    <!-- metisMenu -->
+    <script src="~/Content/Webmaster/js/metisMenu.min.js"></script>
+    <!-- scrollbar -->
+    <script src="~/Content/Webmaster/js/scrollbar.min.js"></script>
+    <!-- Swiper Slider -->
+    <script src="~/Content/Webmaster/vendors/swiper-master/js/swiper.min.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+/*================================================================ Default ===================================================================*/
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #d11967;
+}
+.overlay {
+    background-color: rgba(204, 56, 119, 0.8);
+}
+.option {
+    background-color: #d11967;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: #d11967 !important;
+    background-color: transparent;
+}
+.navbar-default.small .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: #d11967 !important;
+    background-color: transparent;
+}
+.site-title h3 {
+    color: #d11967;
+}
+.navbar-default.small .site-title h3 {
+    color: #d11967;
+    margin: 24px 0px;
+}
+.carousel-indicators .active {
+    background-color: #d11967;
+}
+.home-text h3 {
+    color: #d11967;
+}
+.home-contact1 {
+    background-color: #d11967;
+    border: 1px solid #d11967;
+}
+.features-title h3 {
+    color: #d11967;
+}
+.features-icon {
+    color: #d11967;
+}
+.features-details:hover h3{
+    color: #d11967;
+}
+.underline1 {
+    background-color: #d11967;
+}
+.underline2{
+    background-color: #d11967;
+}
+#about {
+    background-color: #d11967;
+}
+.about-details a {
+    color: #d11967;
+        border: 1px solid #d11967;
+
+}
+.stat-icon {
+    color: #d11967;
+}
+.screenshot-title h3 {
+    color: #d11967;
+}
+.about-indicators li {
+    background: #d11967;
+}
+
+.about-indicators.active {
+    background: #d11967;
+}
+.screenshot-img{
+    border: 3px solid #d11967;
+}
+.video-icon {
+    color: #d11967;
+}
+.video-grid a:hover{
+    text-decoration: none;
+    color: #24d8d2;
+}
+.service-title h3 {
+    color: #d11967;
+}
+.media-body h3 {
+    color: #d11967;
+}
+.ser-icon {
+    border: 1px solid #d11967;
+    padding: 3px;
+}
+.service-icon {
+    background-color: #d11967;
+}
+.team-title h3 {
+    color: #d11967;
+}
+.team-details {
+    background-color: #d11967;
+}
+.team-social li a {
+    background-color: #d11967;
+}
+.team-social li a:hover {
+    color: #d11967;
+}
+.price-title h3 {
+    color: #d11967;
+}
+.price-pack-head h3 {
+    background-color: #d11967;
+}
+.price-pack-head p span {
+    color: #d11967;
+}
+.price-contact {
+    color: #d11967;
+    border: 1px solid #d11967;
+}
+.price-pack:hover .price-contact{
+    background-color: #d11967;
+}
+#testimonial{
+    background-color: #d11967;
+}
+.contact-title h3 {
+    color: #d11967;
+}
+.btn-success.disabled {
+    background-color: #d11967;
+    border-color: #d11967;
+}
+.btn.disabled:hover{
+    background-color: #d11967;
+    border-color: #d11967;
+}
+.btn-success:hover{
+    background-color: #d11967;
+    border-color: #d11967;
+}
+.btn-success {
+    background-color: #d11967;
+    border-color: #d11967;
+}
+.contact-col {
+    background-color: #d11967;
+}
+.contact-icon {
+    color: #d11967;
+}
+.copyright-details{
+    background-color: #d11967;
+    margin-top: 100px;
+}
+@media screen and (max-width: 768px) {
+    .navbar-default.small .site-title h3 {
+        color: #d11967;
+        margin: 9px 0px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .navbar-default.small .site-title h3 {
+        color: #d11967;
+        margin: 26px 0px;
+    }
+}
+
+
+
+
+
+
+
+
+
+

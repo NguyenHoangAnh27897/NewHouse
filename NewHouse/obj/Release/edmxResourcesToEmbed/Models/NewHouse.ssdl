@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NewHouseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="NH_AboutUs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="NH_Architec">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Avatar" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Language" Type="nvarchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="NH_Contact">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="200" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="NH_Feature">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Icon01" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title01" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description01" Type="nvarchar" MaxLength="200" />
+    <Property Name="Icon02" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title02" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description02" Type="nvarchar" MaxLength="200" />
+    <Property Name="Icon03" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title03" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description03" Type="nvarchar" MaxLength="200" />
+    <Property Name="Icon04" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title04" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description04" Type="nvarchar" MaxLength="200" />
+    <Property Name="Icon05" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title05" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description05" Type="nvarchar" MaxLength="200" />
+    <Property Name="Icon06" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title06" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description06" Type="nvarchar" MaxLength="200" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Language" Type="nvarchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="NH_Homepage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title01" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="SubTitle01" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image01" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description01" Type="nvarchar" MaxLength="200" />
+    <Property Name="SubTitle02" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image02" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description02" Type="nvarchar" MaxLength="200" />
+    <Property Name="SubTitle03" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image03" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description03" Type="nvarchar" MaxLength="200" />
+    <Property Name="SubTitle04" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image04" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description04" Type="nvarchar" MaxLength="200" />
+    <Property Name="Language" Type="nvarchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="NH_Intro">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Language" Type="nvarchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="NH_News">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Images" Type="nvarchar(max)" />
+    <Property Name="Language" Type="nvarchar" MaxLength="5" />
+    <Property Name="Avatar" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="NH_Partner">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Avatar" Type="nvarchar" MaxLength="50" />
+    <Property Name="Link" Type="nvarchar(max)" />
+    <Property Name="Language" Type="nvarchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="NH_Partnership">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="NH_Project">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProjectName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Avatar" Type="nvarchar" MaxLength="50" />
+    <Property Name="Images" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Language" Type="nvarchar" MaxLength="5" />
+    <Property Name="ArchitectID" Type="int" />
+  </EntityType>
+  <EntityType Name="NH_Slider">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title01" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubTitle01" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image01" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title02" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubTitle02" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image02" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title03" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubTitle03" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image03" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title04" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubTitle04" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image04" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title05" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubTitle05" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image05" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title06" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubTitle06" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image06" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="NH_Solution">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="SolutionContent" Type="nvarchar(max)" />
+    <Property Name="Language" Type="nvarchar" MaxLength="5" />
+  </EntityType>
+  <EntityContainer Name="NewHouseModelStoreContainer">
+    <EntitySet Name="NH_AboutUs" EntityType="Self.NH_AboutUs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NH_Architec" EntityType="Self.NH_Architec" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NH_Contact" EntityType="Self.NH_Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NH_Feature" EntityType="Self.NH_Feature" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NH_Homepage" EntityType="Self.NH_Homepage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NH_Intro" EntityType="Self.NH_Intro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NH_News" EntityType="Self.NH_News" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NH_Partner" EntityType="Self.NH_Partner" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NH_Partnership" EntityType="Self.NH_Partnership" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NH_Project" EntityType="Self.NH_Project" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NH_Slider" EntityType="Self.NH_Slider" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NH_Solution" EntityType="Self.NH_Solution" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

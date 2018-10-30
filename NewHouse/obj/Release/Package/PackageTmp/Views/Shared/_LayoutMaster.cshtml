@@ -1,0 +1,204 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Trang quản trị</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Content/Webmaster/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/Content/Webmaster/css/font-awesome.min.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="~/Content/Webmaster/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/Webmaster/css/owl.theme.default.min.css">
+    <!-- mnap Resources -->
+    <link rel="stylesheet" href="~/Content/Webmaster/js/amcharts/plugins/export/export.css" type="text/css" media="all" />
+
+    <!-- Start datatable css -->
+    @*<link rel="stylesheet" type="text/css" href="~/Content/Webmaster/js/datatables/1.10.19/css/jquery.dataTables.css">
+        <link rel="stylesheet" type="text/css" href="~/Content/Webmaster/js/datatables/1.10.18/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" type="text/css" href="~/Content/Webmaster/js/datatables/responsive/2.2.3/css/responsive.bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="~/Content/Webmaster/js/datatables/responsive/2.2.3/css/responsive.jqueryui.min.css">*@
+
+    <!-- scrollbar -->
+    <link rel="stylesheet" href="~/Content/Webmaster/css/scrollbar.css">
+    <!-- metismenu -->
+    <link rel="stylesheet" href="~/Content/Webmaster/css/metisMenu.css">
+    <!-- Site Style -->
+    <link rel="stylesheet" href="~/Content/Webmaster/style.css">
+    <link rel="stylesheet" href="~/Content/Webmaster/css/responsive.css">
+    <!-- Modernizr Js -->
+    <script src="~/Content/Webmaster/vendors/modernizr-js/modernizr.js"></script>
+    <!--================= Jquery plugins =================-->
+    <script src="~/Content/Webmaster/js/jquery.min.js"></script>
+    <script src="~/Content/Webmaster/ckeditor/ckeditor.js"></script>
+</head>
+<body>
+
+
+    <div class="page-wrapper">
+
+
+        <!--================= Start header section =================-->
+        <div class="top-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6">
+                        <ul class="top-header-left">
+                            <li class="bars"><i class="fa fa-bars"></i></li>
+                            <!-- <li class="search-btn"><i class="fa fa-search"></i></li> -->
+                        </ul>
+                    </div>
+                    <div class="col-xl-8 col-md-6">
+                        <ul class="top-user">
+                            <li class="icons">
+                                <i class="fa fa-user"></i>
+                                <ul class="drop-down user-dropdown">
+                                    <li class="single-text"><a href="/webmaster/logout"><i class="fa fa-power-off "></i> Đăng xuất</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--================= End header section =================-->
+        <!--================= Start left sidebar section =================-->
+        <div class="left-sidebar">
+            <div class="logo">
+                <a href="/webmaster/index">
+                    <span style="color:#ca9f6d">A3 SOLUTION</span>
+                </a>
+            </div>
+            <div class="profile-user">
+                <img src="~/Images/webmaster/logo/logoa3.png" alt="" class="img-fluid" width="120" />
+                <h5>Administrator</h5>
+                <p>WEBSITE ADMINISTRATOR</p>
+            </div>
+            <nav class="left-menu">
+                <ul class="metismenu" id="menu">
+                    <li>
+                        <a href="javascript:void(0)" aria-expanded="true">Quản lí trang chủ</a>
+                        <ul>
+                            <li><a href="/slidermaster/edit">Chỉnh sửa Slider</a></li>
+                            <li><a href="/solutionmaster/edit">Chỉnh sửa phần giải pháp</a></li>
+                            <li><a href="/homepage/index">Chỉnh sửa phần mô hình</a></li>
+                            <li><a href="/featuremaster/edit">Chỉnh sửa phần tính năng</a></li>
+                            <li><a href="/partnermaster/editarchitect">Chỉnh sửa phần kiến trúc sư</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" aria-expanded="true">Quản lí Dự án</a>
+                        <ul>
+                            <li><a href="/projectmaster/list">Danh sách Dự án</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" aria-expanded="true">Quản lí Tin tức</a>
+                        <ul>
+                            <li><a href="/newsmaster/list">Danh sách Tin tức</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" aria-expanded="true">Quản lí Kiến trúc sư</a>
+                        <ul>
+                            <li><a href="/architectmaster/list">Danh sách Kiến trúc sư</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" aria-expanded="true">Quản lí Đối tác</a>
+                        <ul>
+                            <li><a href="/partnermaster/list">Danh sách Đối tác</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" aria-expanded="true">Quản lí phần liên hệ</a>
+                        <ul>
+                            <li><a href="/homepage/editcontact">Chỉnh sửa phần liên hệ</a></li>
+                            <li><a href="/contactmaster/list">Danh sách liên hệ liên hệ</a></li>
+                        </ul>
+                    </li>
+                   
+                </ul>
+            </nav>
+        </div>
+        <!--================= End left sidebar section =================-->
+        <!--================= End left sidebar section =================-->
+        @RenderBody()
+        <!--================= End left sidebar section =================-->
+
+
+    </div>
+
+
+    <!--================= Start footer section =================-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p> © A3 Solution 2018 . All right reserved</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--================= End footer section =================-->
+    <!--================= Start search section =================-->
+    <!-- <div class="search-area search-hide">
+        <div class="close-btn"></div>
+        <form>
+            <input class="form-control" type="search" placeholder="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div> -->
+    <!--================= End search section =================-->
+    <!-- Bootstrap -->
+    <script src="~/Content/Webmaster/js/bootstrap.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="~/Content/Webmaster/js/owl.carousel.min.js"></script>
+    <!-- metisMenu -->
+    <script src="~/Content/Webmaster/js/metisMenu.min.js"></script>
+    <!-- scrollbar -->
+    <script src="~/Content/Webmaster/js/scrollbar.min.js"></script>
+    <!-- Swiper Slider -->
+    <script src="~/Content/Webmaster/vendors/swiper-master/js/swiper.min.js"></script>
+    <!-- maps js -->
+    <!-- Start datatable js -->
+    @*<script src="~/Content/Webmaster/js/datatable/1.10.19/js/jquery.dataTables.js"></script>
+        <script src="~/Content/Webmaster/js/datatable/1.10.18/js/jquery.dataTables.min.js"></script>
+        <script src="~/Content/Webmaster/js/datatable/1.10.18/js/dataTables.bootstrap4.min.js"></script>
+        <script src="~/Content/Webmaster/js/datatable/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+        <script src="~/Content/Webmaster/js/datatable/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>*@
+
+    <!-- maps Resources -->
+    <script src="~/Content/Webmaster/js/amcharts/ammap.js"></script>
+    <script src="~/Content/Webmaster/js/amcharts/maps/js/worldLow.js"></script>
+    <script src="~/Content/Webmaster/js/amcharts/plugins/export/export.min.js"></script>
+    <script src="~/Content/Webmaster/js/amcharts/themes/dark.js"></script>
+    <script src="~/Content/Webmaster/js/cleave.min.js"></script>
+    <script src="~/Content/Webmaster/js/cleave-phone.i18n.js"></script>
+    <script src="~/Content/Webmaster/js/maps.js"></script>
+    <!-- main js -->
+    <script src="~/Content/Webmaster/js/main.js"></script>
+    @*<script src="~/Content/Style/Webmaster/js/ckeditor/ckeditor.js"></script>*@
+    <!-- income chart js -->
+    <script src="~/Content/Webmaster/js/highcharts.js"></script>
+    <script>
+        var cleaveNumeral = new Cleave('.input-numeral', {
+            numeral: true,
+            numeralThousandsGroupStyle: 'thousand'
+        });
+        Highcharts.chart('income-chart', { chart: { type: 'areaspline' }, title: { text: '' }, legend: { layout: 'vertical', align: 'left', verticalAlign: 'top', x: 150, y: 100, floating: true, borderWidth: 1, backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#000' }, xAxis: { categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], plotBands: [{ from: 4.5, to: 6.5, color: 'rgba(68, 170, 213, .2)' }] }, yAxis: { title: { text: '' } }, tooltip: { shared: true, valueSuffix: ' units' }, credits: { enabled: false }, plotOptions: { areaspline: { fillOpacity: 0.5 } }, series: [{ name: '', data: [3, 4, 3, 5, 4, 10, 12] }] });
+    </script>
+
+
+
+</body>
+</html>
+

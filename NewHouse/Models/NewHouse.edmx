@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="NewHouseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="NH_AboutUs">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar" MaxLength="200" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="NH_Architec">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" />
+          <Property Name="Avatar" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Language" Type="nvarchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="NH_Contact">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Email" Type="nvarchar" MaxLength="200" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="200" />
+          <Property Name="Description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="NH_Feature">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Icon01" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title01" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description01" Type="nvarchar" MaxLength="200" />
+          <Property Name="Icon02" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title02" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description02" Type="nvarchar" MaxLength="200" />
+          <Property Name="Icon03" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title03" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description03" Type="nvarchar" MaxLength="200" />
+          <Property Name="Icon04" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title04" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description04" Type="nvarchar" MaxLength="200" />
+          <Property Name="Icon05" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title05" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description05" Type="nvarchar" MaxLength="200" />
+          <Property Name="Icon06" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title06" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description06" Type="nvarchar" MaxLength="200" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Language" Type="nvarchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="NH_Homepage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title01" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="SubTitle01" Type="nvarchar" MaxLength="50" />
+          <Property Name="Image01" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description01" Type="nvarchar" MaxLength="200" />
+          <Property Name="SubTitle02" Type="nvarchar" MaxLength="50" />
+          <Property Name="Image02" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description02" Type="nvarchar" MaxLength="200" />
+          <Property Name="SubTitle03" Type="nvarchar" MaxLength="50" />
+          <Property Name="Image03" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description03" Type="nvarchar" MaxLength="200" />
+          <Property Name="SubTitle04" Type="nvarchar" MaxLength="50" />
+          <Property Name="Image04" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description04" Type="nvarchar" MaxLength="200" />
+          <Property Name="Language" Type="nvarchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="NH_Intro">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar" MaxLength="200" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Language" Type="nvarchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="NH_News">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="200" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Images" Type="nvarchar(max)" />
+          <Property Name="Language" Type="nvarchar" MaxLength="5" />
+          <Property Name="Avatar" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="NH_Partner">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" />
+          <Property Name="Avatar" Type="nvarchar" MaxLength="50" />
+          <Property Name="Link" Type="nvarchar(max)" />
+          <Property Name="Language" Type="nvarchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="NH_Partnership">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="200" />
+          <Property Name="Description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="NH_Project">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProjectName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Avatar" Type="nvarchar" MaxLength="50" />
+          <Property Name="Images" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Language" Type="nvarchar" MaxLength="5" />
+          <Property Name="ArchitectID" Type="int" />
+        </EntityType>
+        <EntityType Name="NH_Slider">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title01" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubTitle01" Type="nvarchar" MaxLength="50" />
+          <Property Name="Image01" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title02" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubTitle02" Type="nvarchar" MaxLength="50" />
+          <Property Name="Image02" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title03" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubTitle03" Type="nvarchar" MaxLength="50" />
+          <Property Name="Image03" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title04" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubTitle04" Type="nvarchar" MaxLength="50" />
+          <Property Name="Image04" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title05" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubTitle05" Type="nvarchar" MaxLength="50" />
+          <Property Name="Image05" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title06" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubTitle06" Type="nvarchar" MaxLength="50" />
+          <Property Name="Image06" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="NH_Solution">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="SolutionContent" Type="nvarchar(max)" />
+          <Property Name="Language" Type="nvarchar" MaxLength="5" />
+        </EntityType>
+        <EntityContainer Name="NewHouseModelStoreContainer">
+          <EntitySet Name="NH_AboutUs" EntityType="Self.NH_AboutUs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NH_Architec" EntityType="Self.NH_Architec" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NH_Contact" EntityType="Self.NH_Contact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NH_Feature" EntityType="Self.NH_Feature" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NH_Homepage" EntityType="Self.NH_Homepage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NH_Intro" EntityType="Self.NH_Intro" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NH_News" EntityType="Self.NH_News" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NH_Partner" EntityType="Self.NH_Partner" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NH_Partnership" EntityType="Self.NH_Partnership" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NH_Project" EntityType="Self.NH_Project" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NH_Slider" EntityType="Self.NH_Slider" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NH_Solution" EntityType="Self.NH_Solution" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NewHouseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="NH_Contact">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Subject" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="NH_Feature">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Icon01" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title01" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description01" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Icon02" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title02" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description02" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Icon03" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title03" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description03" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Icon04" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title04" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description04" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Icon05" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title05" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description05" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Icon06" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title06" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description06" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Language" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="NH_Homepage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title01" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle01" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Image01" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description01" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle02" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Image02" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description02" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle03" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Image03" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description03" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle04" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Image04" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description04" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Language" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="NH_Intro">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Language" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="NH_News">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Images" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Language" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="Avatar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="NH_Project">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProjectName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Avatar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Images" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Language" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="ArchitectID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="NH_Solution">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SolutionContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Language" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="NewHouseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="NH_Contact" EntityType="Self.NH_Contact" />
+          <EntitySet Name="NH_Feature" EntityType="Self.NH_Feature" />
+          <EntitySet Name="NH_Homepage" EntityType="Self.NH_Homepage" />
+          <EntitySet Name="NH_Intro" EntityType="Self.NH_Intro" />
+          <EntitySet Name="NH_News" EntityType="Self.NH_News" />
+          <EntitySet Name="NH_Project" EntityType="Self.NH_Project" />
+          <EntitySet Name="NH_Solution" EntityType="Self.NH_Solution" />
+          <EntitySet Name="NH_AboutUs" EntityType="NewHouseModel.NH_AboutUs" />
+          <EntitySet Name="NH_Partner" EntityType="NewHouseModel.NH_Partner" />
+          <EntitySet Name="NH_Partnership" EntityType="NewHouseModel.NH_Partnership" />
+          <EntitySet Name="NH_Slider" EntityType="NewHouseModel.NH_Slider" />
+          <EntitySet Name="NH_Architec" EntityType="NewHouseModel.NH_Architec" />
+        </EntityContainer>
+        <EntityType Name="NH_AboutUs">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="NH_Partner">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Avatar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Language" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="NH_Partnership">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="NH_Slider">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title01" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle01" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Image01" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title02" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle02" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Image02" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title03" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle03" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Image03" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title04" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle04" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Image04" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title05" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle05" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Image05" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title06" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle06" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Image06" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="NH_Architec">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Avatar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Language" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NewHouseModelStoreContainer" CdmEntityContainer="NewHouseEntities">
+          <EntitySetMapping Name="NH_Contact">
+            <EntityTypeMapping TypeName="NewHouseModel.NH_Contact">
+              <MappingFragment StoreEntitySet="NH_Contact">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NH_Feature">
+            <EntityTypeMapping TypeName="NewHouseModel.NH_Feature">
+              <MappingFragment StoreEntitySet="NH_Feature">
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Icon01" ColumnName="Icon01" />
+                <ScalarProperty Name="Title01" ColumnName="Title01" />
+                <ScalarProperty Name="Description01" ColumnName="Description01" />
+                <ScalarProperty Name="Icon02" ColumnName="Icon02" />
+                <ScalarProperty Name="Title02" ColumnName="Title02" />
+                <ScalarProperty Name="Description02" ColumnName="Description02" />
+                <ScalarProperty Name="Icon03" ColumnName="Icon03" />
+                <ScalarProperty Name="Title03" ColumnName="Title03" />
+                <ScalarProperty Name="Description03" ColumnName="Description03" />
+                <ScalarProperty Name="Icon04" ColumnName="Icon04" />
+                <ScalarProperty Name="Title04" ColumnName="Title04" />
+                <ScalarProperty Name="Description04" ColumnName="Description04" />
+                <ScalarProperty Name="Icon05" ColumnName="Icon05" />
+                <ScalarProperty Name="Title05" ColumnName="Title05" />
+                <ScalarProperty Name="Description05" ColumnName="Description05" />
+                <ScalarProperty Name="Icon06" ColumnName="Icon06" />
+                <ScalarProperty Name="Title06" ColumnName="Title06" />
+                <ScalarProperty Name="Description06" ColumnName="Description06" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NH_Homepage">
+            <EntityTypeMapping TypeName="NewHouseModel.NH_Homepage">
+              <MappingFragment StoreEntitySet="NH_Homepage">
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Title01" ColumnName="Title01" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="SubTitle01" ColumnName="SubTitle01" />
+                <ScalarProperty Name="Image01" ColumnName="Image01" />
+                <ScalarProperty Name="Description01" ColumnName="Description01" />
+                <ScalarProperty Name="SubTitle02" ColumnName="SubTitle02" />
+                <ScalarProperty Name="Image02" ColumnName="Image02" />
+                <ScalarProperty Name="Description02" ColumnName="Description02" />
+                <ScalarProperty Name="SubTitle03" ColumnName="SubTitle03" />
+                <ScalarProperty Name="Image03" ColumnName="Image03" />
+                <ScalarProperty Name="Description03" ColumnName="Description03" />
+                <ScalarProperty Name="SubTitle04" ColumnName="SubTitle04" />
+                <ScalarProperty Name="Image04" ColumnName="Image04" />
+                <ScalarProperty Name="Description04" ColumnName="Description04" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NH_Intro">
+            <EntityTypeMapping TypeName="NewHouseModel.NH_Intro">
+              <MappingFragment StoreEntitySet="NH_Intro">
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NH_News">
+            <EntityTypeMapping TypeName="NewHouseModel.NH_News">
+              <MappingFragment StoreEntitySet="NH_News">
+                <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Images" ColumnName="Images" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NH_Project">
+            <EntityTypeMapping TypeName="NewHouseModel.NH_Project">
+              <MappingFragment StoreEntitySet="NH_Project">
+                <ScalarProperty Name="ArchitectID" ColumnName="ArchitectID" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+                <ScalarProperty Name="Images" ColumnName="Images" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NH_Solution">
+            <EntityTypeMapping TypeName="NewHouseModel.NH_Solution">
+              <MappingFragment StoreEntitySet="NH_Solution">
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="SolutionContent" ColumnName="SolutionContent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NH_AboutUs">
+            <EntityTypeMapping TypeName="NewHouseModel.NH_AboutUs">
+              <MappingFragment StoreEntitySet="NH_AboutUs">
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NH_Partner">
+            <EntityTypeMapping TypeName="NewHouseModel.NH_Partner">
+              <MappingFragment StoreEntitySet="NH_Partner">
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NH_Partnership">
+            <EntityTypeMapping TypeName="NewHouseModel.NH_Partnership">
+              <MappingFragment StoreEntitySet="NH_Partnership">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NH_Slider">
+            <EntityTypeMapping TypeName="NewHouseModel.NH_Slider">
+              <MappingFragment StoreEntitySet="NH_Slider">
+                <ScalarProperty Name="Image06" ColumnName="Image06" />
+                <ScalarProperty Name="SubTitle06" ColumnName="SubTitle06" />
+                <ScalarProperty Name="Title06" ColumnName="Title06" />
+                <ScalarProperty Name="Image05" ColumnName="Image05" />
+                <ScalarProperty Name="SubTitle05" ColumnName="SubTitle05" />
+                <ScalarProperty Name="Title05" ColumnName="Title05" />
+                <ScalarProperty Name="Image04" ColumnName="Image04" />
+                <ScalarProperty Name="SubTitle04" ColumnName="SubTitle04" />
+                <ScalarProperty Name="Title04" ColumnName="Title04" />
+                <ScalarProperty Name="Image03" ColumnName="Image03" />
+                <ScalarProperty Name="SubTitle03" ColumnName="SubTitle03" />
+                <ScalarProperty Name="Title03" ColumnName="Title03" />
+                <ScalarProperty Name="Image02" ColumnName="Image02" />
+                <ScalarProperty Name="SubTitle02" ColumnName="SubTitle02" />
+                <ScalarProperty Name="Title02" ColumnName="Title02" />
+                <ScalarProperty Name="Image01" ColumnName="Image01" />
+                <ScalarProperty Name="SubTitle01" ColumnName="SubTitle01" />
+                <ScalarProperty Name="Title01" ColumnName="Title01" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NH_Architec">
+            <EntityTypeMapping TypeName="NewHouseModel.NH_Architec">
+              <MappingFragment StoreEntitySet="NH_Architec">
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

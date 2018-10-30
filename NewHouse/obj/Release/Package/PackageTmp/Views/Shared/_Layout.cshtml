@@ -1,0 +1,156 @@
+﻿
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- ========== PAGE TITLE ========== -->
+    <title>Newhouse Building Solution</title>
+    <!-- ========== META TAGS ========== -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta charset="utf-8">
+    <meta name="author" content="XXX">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ========== CSS ========== -->
+    <link rel="stylesheet" href="~/Content/NewHouse/css/animate.css">
+    <link rel="stylesheet" href="~/Content/NewHouse/css/site.css">
+    <link rel="stylesheet" href="~/Content/NewHouse/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/NewHouse/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Slab" rel="stylesheet">
+    <script src="https://use.fontawesome.com/1b98f46f85.js"></script>
+    <link rel="stylesheet" href="~/Content/NewHouse/assets/css/bootstrap.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" type="text/css" href="~/Content/NewHouse/assets/css/animate.css" media="screen">
+    <link rel="stylesheet" href="~/Content/NewHouse/css/style.css">
+    <link id="color" href="~/Content/NewHouse/css/color.css" rel="stylesheet">
+    <!-- ========== JQUERY PLUGIN ========== -->
+    <script src="~/Content/NewHouse/js/jQuery-latest.js" type="text/javascript"></script>
+    <script type="text/javascript" src="~/Content/NewHouse/js/ajax-jquery.min.js"></script>
+
+</head><!-- end head -->
+<body>
+    <div class="se-pre-con"></div><!-- ========== PRELOADER ========== -->
+    <!-- ========== MENUBAR ========== -->
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <a href="popup.html">
+                <img src="~/Content/NewHouse/img/popup.jpg">
+                <button class="btn btn-success">Tìm hiểu Thêm</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="option"><i class="fa fa-cogs fa-2x" aria-hidden="true"></i></div>
+        <span class="color default"></span>
+        <span class="color style1"></span>
+        <span class="color style2"></span>
+        <span class="color style3"></span>
+        <span class="color style4"></span>
+        <span class="color style5"></span>
+    </div>
+    <div class="menubar">
+        <div class="menubar-content">
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4">
+                            <div class="site-title">
+                                <a href="/home/index">
+                                    <img src="~/Content/NewHouse/img/Logo left.png" alt="Logo" class="logo-img">
+                                </a>
+                            </div><!-- end site-title -->
+                        </div><!-- end col-md-4 -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button><!-- end button -->
+                        </div><!-- end navbar-header -->
+                        <div class="col-md-8 col-sm-8 navbar-style">
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    @if (ViewBag.OPT == 0)
+                                    {
+                                        <li>
+                                            <a href="#home">Trang chủ</a>
+                                        </li>
+                                        <li>
+                                            <a href="#team">Giải pháp</a>
+                                        </li>
+                                        <li>
+                                            <a href="#project">Dự án</a>
+                                        </li>
+                                        <li>
+                                            <a href="#testimonial">Tin tức</a>
+                                        </li>
+                                        <li>
+                                            <a href="#architect">Kiến trúc sư & Đối tác</a>
+                                        </li>
+                                        <li>
+                                            <a href="#contact">Liên Hệ</a>
+                                        </li>
+                                    }
+                                    else
+                                    {
+                                        <li>
+                                            <a href="#home">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="#team">Solution</a>
+                                        </li>
+                                        <li>
+                                            <a href="#project">Project</a>
+                                        </li>
+                                        <li>
+                                            <a href="#testimonial">News</a>
+                                        </li>
+                                        <li>
+                                            <a href="#architect">Architect &amp; Partner</a>
+                                        </li>
+                                        <li>
+                                            <a href="#contact">Contact</a>
+                                        </li>
+                                    }
+
+                                    <div class="navbar-nav-language">
+                                        <a href="@Url.Action("Index", "Home", new {opt = 1 })">EN</a>|<a href="@Url.Action("Index", "Home", new {opt = 0 })">VN</a>
+                                    </div>
+                                </ul><!-- end nav -->
+                            </div><!-- end collapse navbar-collapse -->
+                        </div><!-- end col-md-8 -->
+                    </div><!-- end row -->
+                </div><!-- end container-fluid -->
+            </nav><!-- navbar -->
+        </div><!-- end menubar-content -->
+    </div><!-- end menubar -->
+    <div class="main-page-content">
+        @RenderBody()
+
+
+    </div><!-- end main-page -->
+    <!-- ================================ JQUERY =============================== -->
+
+    <script src="~/Content/NewHouse/js/bootstrap.min.js"></script>
+    <script src="~/Content/NewHouse/js/wow.js"></script>
+    <script src="~/Content/NewHouse/js/wow-anim.js"></script>
+    <script type="text/javascript" src="~/Content/NewHouse/assets/js/form-validator.min.js"></script>
+    <script type="text/javascript" src="~/Content/NewHouse/assets/js/contact-form-script.js"></script>
+    <script src="~/Content/NewHouse/js/main.js" type="text/javascript"></script>
+    <script src="~/Content/NewHouse/js/jquery.scrolly.js"></script>
+    <script type="text/javascript" src="~/Content/NewHouse/js/jquery.mixitup.min.js"></script>
+    <script type="text/javascript" src="~/Content/NewHouse/js/jquery.fancybox.js?v=2.1.5"></script>
+    <script type="text/javascript" src="~/Content/NewHouse/js/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <script type="text/javascript" src="~/Content/NewHouse/js/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+    <script type="text/javascript" src="~/Content/NewHouse/js/jquery.fancybox-media.js?v=1.0.6"></script>
+    <script type="text/javascript" src="~/Content/NewHouse/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="~/Content/NewHouse/js/fancybox-script.js"></script>
+    <script type="text/javascript" src="~/Content/NewHouse/js/fancybox.js"></script>
+    <script type="text/javascript" src="~/Content/NewHouse/js/mixitup.js"></script>
+    <script src="~/Content/NewHouse/js/jquery.counterup.min.js"></script>
+    <script src="~/Content/NewHouse/js/EasePack.min.js"></script>
+    <script src="~/Content/NewHouse/js/video.js"></script>
+</body><!-- end body -->
+</html><!-- end html -->

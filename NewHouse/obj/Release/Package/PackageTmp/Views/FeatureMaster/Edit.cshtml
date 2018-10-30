@@ -1,0 +1,268 @@
+﻿@model IEnumerable<NewHouse.Models.NH_Feature>
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+<div class="main-wrapper">
+    <div class="container">
+
+        <!-- Start breadcrumb section  -->
+        <div class="row">
+            <div class="col-lg-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/webmaster/index">Trang chủ</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Quản lí trang chủ</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div class="col-lg-12" id="choose">
+            <div class="row">
+                <h5 class="mb col-lg-2" style="color:white;">Ngôn ngữ: </h5>
+                <select class="form-control col-lg-3" id="opt" name="opt" style="width:15%; margin-left:-35px">
+                    <option value="vn" selected>Tiếng Việt</option>
+                    <option value="en">Tiếng Anh</option>
+                </select>
+            </div>
+        </div>
+        <br />
+
+        <!-- Start form -->
+        <div class="form-area">
+            <div class="row">
+
+                <div class="col-lg-12" id="vn">
+                    <div class="single-form">
+                        <div class="section-head">
+                            <div class="title">
+                                <h4>Chỉnh sửa tính năng</h4>
+                            </div>
+                        </div>
+
+                        <div class="section-body">
+                            <form action="/featuremaster/edit" method="post" enctype="multipart/form-data">
+                                @foreach (var item in Model)
+                                {
+                                    if (item.ID == 1)
+                                    {
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 100 KÍ TỰ)</label>
+                                            <input name="title" maxlength="100" class="form-control" value="@item.Title" />
+                                            <input type="hidden" name="lang" value="vn" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput4">Nội dung</label>
+                                            <textarea name="content" id="editor">@item.Description</textarea>
+                                        </div>
+                                        <hr style="background-color: #ced4da;" />
+
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                                    <input name="title1" maxlength="50" class="form-control" value="@item.Title01" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Nội dung (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                                    <textarea name="des1" maxlength="200" style="height:100px;" class="form-control">@item.Description01</textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                                    <input name="title2" maxlength="50" class="form-control" value="@item.Title02" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Nội dung (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                                    <textarea name="des2" maxlength="200" style="height:100px;" class="form-control">@item.Description02</textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                                    <input name="title3" maxlength="50" class="form-control" value="@item.Title03" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Nội dung (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                                    <textarea name="des3" maxlength="200" style="height:100px;" class="form-control">@item.Description03</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr style="background-color: #ced4da;" />
+
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                                    <input name="title4" maxlength="50" class="form-control" value="@item.Title04" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Nội dung (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                                    <textarea name="des4" maxlength="200" style="height:100px;" class="form-control">@item.Description04</textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                                    <input name="title5" maxlength="50" class="form-control" value="@item.Title05" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Nội dung (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                                    <textarea name="des5" maxlength="200" style="height:100px;" class="form-control">@item.Description05</textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                                    <input name="title6" maxlength="50" class="form-control" value="@item.Title06" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Nội dung (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                                    <textarea name="des6" maxlength="200" style="height:100px;" class="form-control">@item.Description06</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input class="btn btn-primaryt" type="submit" value="Lưu" />
+                                    }
+                                }
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-12" id="en" style="display:none">
+                    <div class="single-form">
+                        <div class="section-head">
+                            <div class="title">
+                                <h4>Chỉnh sửa tính năng</h4>
+                            </div>
+                        </div>
+
+                        <div class="section-body">
+                            <form action="/featuremaster/edit" method="post" enctype="multipart/form-data">
+                                @foreach (var item in Model)
+                                {
+                                    if (item.ID == 2)
+                                    {
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 100 KÍ TỰ)</label>
+                                            <input name="title" maxlength="100" class="form-control" value="@item.Title" />
+                                            <input type="hidden" name="lang" value="en" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput4">Nội dung</label>
+                                            <textarea name="content" id="editor1">@item.Description</textarea>
+                                        </div>
+                                        <hr style="background-color: #ced4da;" />
+
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                                    <input name="title1" maxlength="50" class="form-control" value="@item.Title01" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Nội dung (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                                    <textarea name="des1" maxlength="200" class="form-control">@item.Description01</textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                                    <input name="title2" maxlength="50" class="form-control" value="@item.Title02" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Nội dung (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                                    <textarea name="des2" maxlength="200" class="form-control">@item.Description02</textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                                    <input name="title3" maxlength="50" class="form-control" value="@item.Title03" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Nội dung (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                                    <textarea name="des3" maxlength="200" class="form-control">@item.Description03</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr style="background-color: #ced4da;" />
+
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                                    <input name="title4" maxlength="50" class="form-control" value="@item.Title04" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Nội dung (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                                    <textarea name="des4" maxlength="200" class="form-control">@item.Description04</textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                                    <input name="title5" maxlength="50" class="form-control" value="@item.Title05" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Nội dung (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                                    <textarea name="des5" maxlength="200" class="form-control">@item.Description05</textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                                    <input name="title6" maxlength="50" class="form-control" value="@item.Title06" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput4">Nội dung (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                                    <textarea name="des6" maxlength="200" class="form-control">@item.Description06</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input class="btn btn-primaryt" type="submit" value="Lưu" />
+                                    }
+                                }
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+       ClassicEditor
+        .create(document.querySelector('#editor'))
+        .catch(error => {
+            console.error(error);
+        });
+    ClassicEditor
+        .create(document.querySelector('#editor1'))
+        .catch(error => {
+            console.error(error);
+        });
+    $("#opt").on("change", function () {
+        $("#" + $(this).val()).show().siblings().hide();
+        $("#head").show();
+        $("#choose").show();
+    })
+</script>

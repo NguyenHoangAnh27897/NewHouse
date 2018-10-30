@@ -1,0 +1,177 @@
+/*================================================================ Default =================================================================== background-color: rgba(84, 203, 236, 0.84);*/
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #000000;
+}
+.overlay {
+    background-color: rgba(0, 0, 0, 0.84);
+}
+.option {
+    background-color: #000000;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: #000000 !important;
+    background-color: transparent;
+}
+.navbar-default.small .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: #000000 !important;
+    background-color: transparent;
+}
+.site-title h3 {
+    color: #000000;
+}
+.navbar-default.small .site-title h3 {
+    color: #000000;
+    margin: 24px 0px;
+}
+.carousel-indicators .active {
+    background-color: #000000;
+}
+.home-text h3 {
+    color: #000000;
+}
+.home-contact1 {
+    background-color: #000000;
+    border: 1px solid #000000;
+}
+.features-title h3 {
+    color: #000000;
+}
+.features-icon {
+    color: #000000;
+}
+.features-details:hover h3{
+    color: #000000;
+}
+.underline1 {
+    background-color: #000000;
+}
+.underline2{
+    background-color: #000000;
+}
+#about {
+    background-color: #000000;
+}
+.about-details a {
+    color: #000000;
+        border: 1px solid #000000;
+
+}
+.stat-icon {
+    color: #000000;
+}
+.screenshot-title h3 {
+    color: #000000;
+}
+.about-indicators li {
+    background: #000000;
+}
+
+.about-indicators.active {
+    background: #000000;
+}
+.screenshot-img{
+    border: 3px solid #000000;
+}
+.video-icon {
+    color: #000000;
+}
+.video-grid a:hover{
+    text-decoration: none;
+    color: #24d8d2;
+}
+.service-title h3 {
+    color: #000000;
+}
+.media-body h3 {
+    color: #000000;
+}
+.ser-icon {
+    border: 1px solid #000000;
+    padding: 3px;
+}
+.service-icon {
+    background-color: #000000;
+}
+.team-title h3 {
+    color: #000000;
+}
+.team-details {
+    background-color: #000000;
+}
+.team-social li a {
+    background-color: #000000;
+}
+.team-social li a:hover {
+    color: #000000;
+}
+.price-title h3 {
+    color: #000000;
+}
+.price-pack-head h3 {
+    background-color: #000000;
+}
+.price-pack-head p span {
+    color: #000000;
+}
+.price-contact {
+    color: #000000;
+    border: 1px solid #000000;
+}
+.price-pack:hover .price-contact{
+    background-color: #000000;
+}
+#testimonial{
+    background-color: #000000;
+}
+.contact-title h3 {
+    color: #000000;
+}
+.btn-success.disabled {
+    background-color: #000000;
+    border-color: #000000;
+}
+.btn.disabled:hover{
+    background-color: #000000;
+    border-color: #000000;
+}
+.btn-success:hover{
+    background-color: #000000;
+    border-color: #000000;
+}
+.btn-success {
+    background-color: #000000;
+    border-color: #000000;
+}
+.contact-col {
+    background-color: #000000;
+}
+.contact-icon {
+    color: #000000;
+}
+.copyright-details{
+    background-color: #000000;
+    margin-top: 100px;
+}
+@media screen and (max-width: 768px) {
+    .navbar-default.small .site-title h3 {
+        color: #000000;
+        margin: 9px 0px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .navbar-default.small .site-title h3 {
+        color: #000000;
+        margin: 26px 0px;
+    }
+}
+
+
+
+
+
+
+
+
+
+

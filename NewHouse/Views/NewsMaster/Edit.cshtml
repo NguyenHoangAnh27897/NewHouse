@@ -1,0 +1,131 @@
+﻿@model IQueryable<NewHouse.Models.NH_News>
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    string[] arrStr;
+}
+
+<div class="main-wrapper">
+    <div class="container">
+
+        <!-- Start breadcrumb section  -->
+        <div class="row">
+            <div class="col-lg-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/webmaster/index">Trang chủ</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Quản lí Tin tức</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Start form -->
+        <div class="form-area">
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <div class="single-form">
+                        <div class="section-head">
+                            <div class="title">
+                                <h4>Chỉnh sửa Tin tức</h4>
+                            </div>
+                        </div>
+
+                        <div class="section-body">
+                            <form action="/newsmaster/edit" method="post" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 100 KÍ TỰ)</label>
+                                    <input name="title" maxlength="100" class="form-control" value="@Model.FirstOrDefault().Title" />
+                                    <input type="hidden" name="ID" value="@Model.FirstOrDefault().ID" />
+                                </div>
+
+                                @if (Model.FirstOrDefault().Avatar != null)
+                                {
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1">Hình ảnh đại diện (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 800x600 HOẶC LỚN HƠN)</label>
+                                        <br />
+                                        <input type="file" name="avatar" accept="image/*" />
+                                        <div class="row">
+                                            <div class="col-sm-3 bg-slider" style="background: url('../../Images/NewHouse/imagenews/@Model.FirstOrDefault().Avatar') center center no-repeat / cover;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1">Hình ảnh đại diện (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 800x600 HOẶC LỚN HƠN)</label>
+                                        <br />
+                                        <input type="file" name="avatar" accept="image/*" />
+                                    </div>
+                                }
+
+
+                                @if (Model.FirstOrDefault().Images != null)
+                                {
+                                    if (Model.FirstOrDefault().Images.Contains(","))
+                                    {
+                                        arrStr = Model.FirstOrDefault().Images.Split(',');
+                                        <div class="form-group">
+                                            <label for="exampleFormControlFile1">Những hình ảnh hiển thị (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1280x763 HOẶC LỚN HƠN)</label>
+                                            <br />
+                                            <input type="file" name="images" accept="image/*" multiple="multiple" />
+                                            <div class="row">
+                                                @foreach (var img in arrStr)
+                                                {
+
+                                                    <div class="col-sm-3 bg-slider" style="background: url('../../Images/NewHouse/imagenews/@img') center center no-repeat / cover;">
+                                                    </div>
+                                                }
+                                            </div>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="form-group">
+                                            <label for="exampleFormControlFile1">Những hình ảnh hiển thị (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1280x763 HOẶC LỚN HƠN)</label>
+                                            <br />
+                                            <input type="file" name="images" accept="image/*" multiple="multiple" />
+                                            <div class="row">
+                                                <div class="col-sm-3 bg-slider" style="background: url('../../Images/NewHouse/imagenews/@Model.FirstOrDefault().Images') center center no-repeat / cover;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                                else
+                                {
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1">Những hình ảnh hiển thị (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1280x763 HOẶC LỚN HƠN)</label>
+                                        <br />
+                                        <input type="file" name="images" accept="image/*" multiple="multiple" />
+                                    </div>
+                                }
+
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput4">Nội dung</label>
+                                    <textarea name="content" id="editor">@Model.FirstOrDefault().Description</textarea>
+                                </div>
+                                <input class="btn btn-primaryt" type="submit" value="Lưu" />
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .catch(error => {
+            console.error(error);
+        });
+</script>
+
+
